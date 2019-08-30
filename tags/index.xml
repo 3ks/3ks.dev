@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on TheOrigin</title>
+    <link>https://www.1996.live/tags/</link>
+    <description>Recent content in Tags on TheOrigin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>由 Hugo 强力驱动  •  基于 Dot 主题修改</copyright>
+    <lastBuildDate>Tue, 09 Apr 2019 10:58:08 -0400</lastBuildDate>
+    
+	<atom:link href="https://www.1996.live/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>windows</title>
+      <link>https://www.1996.live/tags/windows/</link>
+      <pubDate>Tue, 09 Apr 2019 10:58:08 -0400</pubDate>
+      
+      <guid>https://www.1996.live/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>装机</title>
+      <link>https://www.1996.live/tags/%E8%A3%85%E6%9C%BA/</link>
+      <pubDate>Tue, 09 Apr 2019 10:58:08 -0400</pubDate>
+      
+      <guid>https://www.1996.live/tags/%E8%A3%85%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,176 @@
+baseURL = "https://www.1996.live/"
+theme = "dot"
+
+[params]
+primaryColor = "#333"
+secondaryColor = "#f9f9f9"
+textColor = "#636363"
+textColorDark = "#242738"
+whiteColor = "#ffffff"
+static = "https://static.sguan.top/"
+
+[Languages]
+  # English Language
+  [Languages.en]
+  languageName = "En"
+  weight = 1
+  languageCode = "zh-cn"
+  title = "TheOrigin"
+  dateFormat = "2006 January 2"
+  home = "主页"
+  logo = "TheOrigin"
+  copyright = "由 Hugo 强力驱动  •  基于 Dot 主题修改"
+
+    # navigation
+    [Languages.en.menu]
+        
+      [[Languages.en.menu.main]]
+        weight = 1
+        name = "分类"
+        url = "/pages"
+        hasChildren = true
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "Windows"
+          URL = "/00-Windows"
+          weight = 1
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "Linux"
+          URL = "/01-Linux"
+          weight = 2
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "架构"
+          URL = "/02-架构"
+          weight = 2
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "Docker"
+          URL = "/03-Docker"
+          weight = 3
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "K8S"
+          URL = "/04-K8S"
+          weight = 4
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "Istio"
+          URL = "/05-Istio"
+          weight = 5
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "Git"
+          URL = "/10-Git"
+          weight = 10
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "数据传输"
+          URL = "/11-数据传输"
+          weight = 11
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "数据存储"
+          URL = "/12-数据存储"
+          weight = 12
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "数据结构和算法"
+          URL = "/13-数据结构和算法"
+          weight = 13
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "Golang"
+          URL = "/20-Golang"
+          weight = 20
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "Python"
+          URL = "/21-Python"
+          weight = 21
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "Java"
+          URL = "/22-Java"
+          weight = 22
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "React"
+          URL = "/30-React"
+          weight = 30
+
+          [[Languages.en.menu.main]]
+          parent = "分类"
+          name = "Vue"
+          URL = "/31-Vue"
+          weight = 31
+
+
+          #[[Languages.en.menu.main]]
+         # parent = "分类"
+          #name = "Installation"
+          #URL = "/installation"
+          #weight = 2
+
+         # [[Languages.en.menu.main]]
+        #  parent = "分类"
+         # name = "Billing and Pricing"
+         # URL = "/billing-pricing"
+        #  weight = 3
+
+         # [[Languages.en.menu.main]]
+         # parent = "分类"
+         # name = "Features"
+         # URL = "/features"
+         # weight = 4
+		 
+		 
+      [[Languages.en.menu.main]]
+        weight = 2
+        name = "关于"
+        url = "/faq"
+
+
+
+    # banner
+    [Languages.en.params.banner]
+      title = "您好，绅士"
+      description = "这是我的一个静态博客，如果想获取更丰富的体验，请移步动态博客"
+      image = "https://cdn.sguan.top/markdown/20190827/NDbkC1VH8Xsg.jpg?imageslim"
+      #placeholder = "输入你感兴趣的内容，说不定我这儿就有呢！"
+
+    # Topics
+    [Languages.en.params.topics]
+      title = "你想看什么？"
+    
+    # 页脚社交联系logo
+    [[Languages.en.socialIcon]]
+      icon = "ti-github"
+      URL = "https://github.com/the-origin"
+
+#    [[Languages.en.socialIcon]]
+#      icon = "ti-twitter-alt"
+#      URL = "/#"
+#
+#    [[Languages.en.socialIcon]]
+#      icon = "ti-vimeo-alt"
+#      URL = "/#"
+#
+#    [[Languages.en.socialIcon]]
+#      icon = "ti-instagram"
+#      URL = "/#"

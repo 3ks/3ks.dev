@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on TheOrigin</title>
+    <link>https://www.1996.live/01-linux/</link>
+    <description>Recent content in Linux on TheOrigin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>由 Hugo 强力驱动  •  基于 Dot 主题修改</copyright>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://www.1996.live/01-linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>装机</title>
+      <link>https://www.1996.live/01-linux/1-%E8%A3%85%E6%9C%BA/</link>
+      <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
+      
+      <guid>https://www.1996.live/01-linux/1-%E8%A3%85%E6%9C%BA/</guid>
+      <description>安装 SSR 服务端 科学上网的服务端使用一键脚本安装(脚本可能会失效)
+ SSR脚本
+ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ssrmu.sh &amp;amp;&amp;amp; chmod +x ssrmu.sh &amp;amp;&amp;amp; bash ssrmu.sh
+ 如果在线链接失效，可以手动创建脚本文件ssrmu.sh，复制蹄子脚本文件.md的内容,然后执行chmod +x ssrmu.sh &amp;amp;&amp;amp; bash ssrmu.sh   BBR脚本
+ wget --no-check-certificate http://www.vpsrb.com/files/centos_bbr.sh &amp;amp;&amp;amp; chmod +x centos_bbr.sh &amp;amp;&amp;amp; ./centos_bbr.sh
+ 如果在线链接失效，可以手动创建脚本文件centos_bbr.sh，复制BBR脚本文件.md的内容,然后执行chmod +x centos_bbr.sh &amp;amp;&amp;amp; ./centos_bbr.sh  collapsible markdown?  可以保存为 /etc/shadowsocks.json
+ 3. 安装 Python (如果没安装) yum install -y python
+4. 运行 SSR  切换至刚刚下载的文件夹 shadowsocksr/shadowsocks/ 运行 python local.py -c /etc/shadowsocks.</description>
+    </item>
+    
+    <item>
+      <title>科学上网技术是第一生产力</title>
+      <link>https://www.1996.live/01-linux/2-%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</link>
+      <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
+      
+      <guid>https://www.1996.live/01-linux/2-%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</guid>
+      <description>安装 SSR 服务端 科学上网的服务端使用一键脚本安装(脚本可能会失效)
+ SSR脚本
+ wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ssrmu.sh &amp;amp;&amp;amp; chmod +x ssrmu.sh &amp;amp;&amp;amp; bash ssrmu.sh
+ 如果在线链接失效，可以手动创建脚本文件ssrmu.sh，复制蹄子脚本文件.md的内容,然后执行chmod +x ssrmu.sh &amp;amp;&amp;amp; bash ssrmu.sh   BBR脚本
+ wget --no-check-certificate http://www.vpsrb.com/files/centos_bbr.sh &amp;amp;&amp;amp; chmod +x centos_bbr.sh &amp;amp;&amp;amp; ./centos_bbr.sh
+ 如果在线链接失效，可以手动创建脚本文件centos_bbr.sh，复制BBR脚本文件.md的内容,然后执行chmod +x centos_bbr.sh &amp;amp;&amp;amp; ./centos_bbr.sh  collapsible markdown?  可以保存为 /etc/shadowsocks.json
+ 3. 安装 Python (如果没安装) yum install -y python
+4. 运行 SSR  切换至刚刚下载的文件夹 shadowsocksr/shadowsocks/ 运行 python local.py -c /etc/shadowsocks.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.1996.live/02-%E6%9E%B6%E6%9E%84/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/03-docker/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/04-k8s/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/05-istio/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/10-git/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/12-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/13-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/20-golang/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/21-python/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/22-java/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/30-react/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/31-vue/chapter-1/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/00-windows/1-windows/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/01-linux/1-%E8%A3%85%E6%9C%BA/</loc>
+    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/00-windows/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/00-windows/2-tips/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/01-linux/2-%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <lastmod>2017-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/01-linux/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/02-%E6%9E%B6%E6%9E%84/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/03-docker/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/04-k8s/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/05-istio/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/10-git/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/12-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/13-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/20-golang/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/21-python/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/22-java/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/30-react/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/31-vue/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/tags/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/tags/windows/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/tags/%E8%A3%85%E6%9C%BA/</loc>
+    <lastmod>2019-04-09T10:58:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/faq/</loc>
+    <lastmod>2018-12-27T09:10:27+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.1996.live/categories/</loc>
+  </url>
+  
+</urlset>
