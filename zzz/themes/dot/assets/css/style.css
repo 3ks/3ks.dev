@@ -167,7 +167,7 @@ select:focus {
 }
 
 .section {
-  padding-top: 100px;
+  padding-top: 20px;
   padding-bottom: 100px;
 }
 
@@ -178,6 +178,19 @@ select:focus {
 
 .section-title {
   margin-bottom: 40px;
+}
+
+.section-img {
+  /*background-size: auto 100%;*/
+  /*background-position: 50%;*/
+  /*background-repeat: no-repeat;*/
+}
+
+.section-type{
+  padding-top: 125px;
+  padding-bottom: 125px;
+  text-align: center;
+  background:rgba(0,0,0,0.5);
 }
 
 .bg-cover {
@@ -612,5 +625,38 @@ li.parent a {
   margin-left: 0;
 }
 /* /elements */
+
+.link-icon{
+  font-size: 30px;
+  color: #777;
+  transition: 0.5s;
+}
+
+.link-icon:hover{
+  font-size: 30px;
+  color: beige;
+}
+
+.link-word{
+  color: #aaa;
+  transition: 0.5s;
+}
+
+.link-word:hover{
+  color: beige;
+}
+
+.type-icon {
+  color: #333;
+  transition: 0.5s;
+}
+
+.type-icon:hover{
+  color: lightskyblue;
+}
+
+.type-icon h3{
+  margin-top: 20px;
+}
 
 /*# sourceMappingURL=maps/style.css.map */

@@ -10,9 +10,11 @@
             {{ "<!-- topic-item -->" | safeHTML }}
             {{ range (where .Site.Pages "Type" "pages") }}
             <div class="col-lg-4 col-sm-6 mb-4">
-              <a href="{{ .Permalink }}" class="px-4 py-5 bg-white shadow text-center d-block">
-                <i class="{{ .Params.Icon }} icon text-dark d-block mb-4"></i>
-                <h3 class="mb-3">{{ .Title }}</h3>
+              <a href="{{ .Permalink }}" class="px-4 py-4 bg-white shadow text-center d-block type-icon">
+<!--                <i class="{{ .Params.Icon }} icon text-dark d-block mb-4"></i>-->
+                <span class=" {{.Params.Icon}} icon iconfont  d-block mb-3"></span>
+
+                <h3 class="mb-4">{{ .Title }}</h3>
                 <p class="mb-0">{{ .Params.Description }}</p>
               </a>
             </div>

@@ -11,9 +11,11 @@
   
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://static.sguan.top/plugins/bootstrap/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- themefy-icon -->
-  <link rel="stylesheet" href="https://static.sguan.top/plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="https://static.sguan.top/plugins/icons/iconfont.css">
+
   <!-- highlight -->
   <link rel="stylesheet" href="https://static.sguan.top/plugins/highlight/hybrid.css">
   <!-- fonts -->
@@ -36,10 +38,12 @@
   <link rel="stylesheet" href="https://static.sguan.top/css/style.min.css" integrity="" media="screen">
 
   <!-- jquiry -->
-  <script src="https://static.sguan.top/plugins/jquery/jquery-1.12.4.js"></script>
+
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- jquary ui -->
-  <script src="https://static.sguan.top/plugins/jquery/jquery-ui.js"></script>
+
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css"></script>
 
   <!--Favicon-->
 
@@ -68,7 +72,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
-          分类
+          文章
         </a>
         <div class="dropdown-menu" >
           
@@ -112,6 +116,8 @@
       </li>
       
       
+
+      
     </ul>
     
     <ul class="list-inline text-center mb-0">
@@ -126,49 +132,46 @@
         <div id="content">
 
   <!-- page title -->
-  <section class="section bg-dark" data-background="">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-
-          <h1 class="text-white mb-4">Java</h1>
-          <p class="text-white mb-4">大就完事，好不好不知道</p>
-          
-            <!-- Javascript -->
-            <script>
-              $(function() {
-                var projects = [
-                  
-                    {
-                      value: "QUIC",
-                      label: "QUIC",
-                      url:"https:\/\/www.1996.live\/22-java\/chapter-1\/"
-                    },
-                  
-                ];
-                $( "#search" ).autocomplete({
-                    minLength: 0,
-                    source: projects,
-                    focus: function( event, ui ) {
-                      $( "#search" ).val( ui.item.label );
-                        return false;
-                    },
-                    select: function( event, ui ) {
-                      $( "#search" ).val( ui.item.label );
-                      $( "#project-id" ).val( ui.item.value );
-                      return false;
-                    }
-                })
-                .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
-                  return $( "<li>" )
-                  .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.label + "</a>" )
-                  .appendTo( ul );
-                };
-              });
-            </script>
+  <section class="bg-cover section-img" data-background="https://static.sguan.top/category/22-java.jpg?imageslim">
+      <section class="section section-type">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+    
+              <h1 class="text-white mb-4">Java</h1>
+              <p class="text-white mb-4">大就完事，好不好不知道</p>
+              
+                <!-- Javascript -->
+                <script>
+                  $(function() {
+                    var projects = [
+                      
+                    ];
+                    $( "#search" ).autocomplete({
+                        minLength: 0,
+                        source: projects,
+                        focus: function( event, ui ) {
+                          $( "#search" ).val( ui.item.label );
+                            return false;
+                        },
+                        select: function( event, ui ) {
+                          $( "#search" ).val( ui.item.label );
+                          $( "#project-id" ).val( ui.item.value );
+                          return false;
+                        }
+                    })
+                        
+                    
+                    
+                    
+                    
+                    
+                  });
+                </script>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
   </section>
   <!-- /page title -->
 
@@ -183,8 +186,6 @@
             </a>
             <ul class="list-styled">
               
-              <li><a href="https://www.1996.live/22-java/chapter-1/">QUIC</a></li>
-              
             </ul>
           </div>
         </div>
@@ -192,10 +193,8 @@
           <div class="p-5 bg-white">
               <h2>Java</h2>
               <div class="bg-gray p-4">
-                  <h3 class="mt-0">文章列表：</h3>
+                  <h3 class="mt-0">相关文章：</h3>
                   <ul class="list-unstyled">
-                    
-                    <li><a href="https://www.1996.live/22-java/chapter-1/">QUIC</a></li>
                     
                   </ul>
               </div>
@@ -208,18 +207,38 @@
 
 
         </div><!-- footer -->
-<footer class="section bg-gray pb-0">
+<footer class="section pb-0 bg-dark">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 text-md-left text-center">
-        <p>由 Hugo 强力驱动  •  基于 Dot 主题修改</p> 
-      </div>
-      <div class="col-md-4 text-md-right text-center">
+      <div class="col-md-12 text-md-center text-center">
         <ul class="list-inline mb-3">
           
-          <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="https://github.com/the-origin"><i class="ti-github"></i></a></li>
+          <li class="list-inline-item">
+            <a class="icon iconfont d-block mb-3" href="https://github.com/the-origin">
+              <i class="icon-git1 link-icon"></i>
+            </a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a class="icon iconfont d-block mb-3" href="https://space.bilibili.com/23240782">
+              <i class="icon-bilibili link-icon"></i>
+            </a>
+          </li>
           
         </ul>
+      </div>
+      <div class="col-md-12 text-md-center text-center">
+
+
+
+        <p class=" text-white">
+          2019-2019 Copyright © <a  class="link-word" href="https://www.1996.live/">1996.live</a> TheOrigin 博客<br>
+
+          由 <a  class="link-word" href="https://gohugo.io/">Hugo 0.57.2</a> 强力驱动  •
+          基于 <a  class="link-word" href="https://themes.gohugo.io/dot-hugo-documentation-theme/">Dot</a> 主题修改 •
+          采用 <a  class="link-word" href="https://www.qiniu.com/">七牛云</a>  CDN
+          <br><br>
+        </p>
       </div>
     </div>
   </div>
@@ -227,7 +246,8 @@
 <!-- /footer -->
 
 <!-- Bootstrap JS -->
-<script src="https://static.sguan.top/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- highlight -->
 <script src="https://static.sguan.top/plugins/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>

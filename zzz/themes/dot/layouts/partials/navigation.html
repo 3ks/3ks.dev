@@ -29,6 +29,29 @@
       </li>
       {{ end }}
       {{ end }}
+<!--      todo
+      分类：笔记 -> 文章 -> 开源库
+      分类可下拉，可跳转，类似当前首页
+      首页该为按时间排序 xx 篇-->
+      <!--      {{ range .Site.Menus.main2 }}
+            {{ if .HasChildren }}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-dark" href="{{ .URL }}" role="button" data-toggle="dropdown" aria-haspopup="true"
+                 aria-expanded="false">
+                {{ .Name }}
+              </a>
+              <div class="dropdown-menu" >
+                {{ range .Children }}
+                <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+                {{ end }}
+              </div>
+            </li>
+            {{ else }}
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+            {{ end }}-->
     </ul>
     <!-- Language List -->
     <ul class="list-inline text-center mb-0">

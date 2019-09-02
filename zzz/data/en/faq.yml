@@ -1,32 +1,32 @@
 faqItem:
   - ID : collapseOne
     title : 我是谁?
-    content : 一个有强迫症的码农。
+    content : 我叫官余棚，一个有强迫症的码农，热衷为开源社区做贡献。
 
-#  - ID : collapseTwo
-#    title : Discounts for students and Non Profit Organizations?
-#    content : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo, unde cum omnis vel sed temporibus, repudiandae impedit nam ad enim porro, qui labore fugiat quod suscipit fuga necessitatibus. Perferendis, ipsum? Cum, reprehenderit. Sapiente atque quam vitae, magnam dolore consequatur temporibus harum odit ab id quo qui aspernatur aliquid officiis sit error asperiores eveniet quibusdam, accusantium enim recusandae quas ea est! Quaerat omnis, placeat vitae laboriosam doloremque recusandae mollitia minima!
-#
-#  - ID : collapseThree
-#    title : I need something unique. Can you make it?
-#    content : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo, unde cum omnis vel sed temporibus, repudiandae impedit nam ad enim porro, qui labore fugiat quod suscipit fuga necessitatibus. Perferendis, ipsum? Cum, reprehenderit. Sapiente atque quam vitae, magnam dolore consequatur temporibus harum odit ab id quo qui aspernatur aliquid officiis sit error asperiores eveniet quibusdam, accusantium enim recusandae quas ea est! Quaerat omnis, placeat vitae laboriosam doloremque recusandae mollitia minima!
-#
-#  - ID : collapseFour
-#    title : Is there any documentation and support?
-#    content : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo, unde cum omnis vel sed temporibus, repudiandae impedit nam ad enim porro, qui labore fugiat quod suscipit fuga necessitatibus. Perferendis, ipsum? Cum, reprehenderit. Sapiente atque quam vitae, magnam dolore consequatur temporibus harum odit ab id quo qui aspernatur aliquid officiis sit error asperiores eveniet quibusdam, accusantium enim recusandae quas ea est! Quaerat omnis, placeat vitae laboriosam doloremque recusandae mollitia minima!
-#
-#  - ID : collapseFive
-#    title : Any refunds?
-#    content : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo, unde cum omnis vel sed temporibus, repudiandae impedit nam ad enim porro, qui labore fugiat quod suscipit fuga necessitatibus. Perferendis, ipsum? Cum, reprehenderit. Sapiente atque quam vitae, magnam dolore consequatur temporibus harum odit ab id quo qui aspernatur aliquid officiis sit error asperiores eveniet quibusdam, accusantium enim recusandae quas ea est! Quaerat omnis, placeat vitae laboriosam doloremque recusandae mollitia minima!
-#
-#  - ID : collapseSix
-#    title : What is a product key?
-#    content : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo, unde cum omnis vel sed temporibus, repudiandae impedit nam ad enim porro, qui labore fugiat quod suscipit fuga necessitatibus. Perferendis, ipsum? Cum, reprehenderit. Sapiente atque quam vitae, magnam dolore consequatur temporibus harum odit ab id quo qui aspernatur aliquid officiis sit error asperiores eveniet quibusdam, accusantium enim recusandae quas ea est! Quaerat omnis, placeat vitae laboriosam doloremque recusandae mollitia minima!
-#
-#  - ID : collapseSeven
-#    title : Where do I download the file to?
-#    content : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo, unde cum omnis vel sed temporibus, repudiandae impedit nam ad enim porro, qui labore fugiat quod suscipit fuga necessitatibus. Perferendis, ipsum? Cum, reprehenderit. Sapiente atque quam vitae, magnam dolore consequatur temporibus harum odit ab id quo qui aspernatur aliquid officiis sit error asperiores eveniet quibusdam, accusantium enim recusandae quas ea est! Quaerat omnis, placeat vitae laboriosam doloremque recusandae mollitia minima!
-#
-#  - ID : collapseEight
-#    title : What happens after I download?
-#    content : Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium nisi officiis maiores quia sapiente totam omnis vel sequi corporis ipsa incidunt reprehenderit recusandae maxime perspiciatis iste placeat architecto, mollitia delectus ut ab quibusdam. Magnam cumque numquam tempore reprehenderit illo, unde cum omnis vel sed temporibus, repudiandae impedit nam ad enim porro, qui labore fugiat quod suscipit fuga necessitatibus. Perferendis, ipsum? Cum, reprehenderit. Sapiente atque quam vitae, magnam dolore consequatur temporibus harum odit ab id quo qui aspernatur aliquid officiis sit error asperiores eveniet quibusdam, accusantium enim recusandae quas ea est! Quaerat omnis, placeat vitae laboriosam doloremque recusandae mollitia minima!
+  - ID : collapseTwo
+    title : 爱好
+    content : 运动，做饭，做清洁，逛 B 站，探索新鲜事物。
+
+  - ID : collapseThree
+    title : 目前就职
+    content : 目前就职于中天智慧科技有限公司，担任 Golang 工程师。
+
+  - ID : collapseFour
+    title : 工作经验
+    content : 2019 年 7 月份正式成为一名社畜。
+
+  - ID : collapseFive
+    title : 2020 年目标
+    content : 2020 年补齐技术栈，只考虑一家公司，B 站！B 站！还是她娘的 B 站！
+
+  - ID : collapseSix
+    title : 2021 年目标
+    content : 如果 2020 年去不了 B 站，准备工作到 2021 年，补齐数据结构和算法等计算机基础，考虑任意公司。
+
+  - ID : collapseSeven
+    title : 我的技术栈
+    content : Golang,Mysql,Linux 已经可以完成我目前的工作了，但是我对于新鲜事物很感兴趣，并了解了大量工作不会用到，但我认为有用、有前景的技术，我的技术栈不是杂，只是因为我有了解每个环节的强迫症。真爱是 Golang，Docker、Kubernetes、Istio 等都是生态相关产品。Linux、Mysql、PostgreSql、Redis，ElastaticSearch、HBase、Shell、Python、Lua、Nginx、Caddy  等作为通用基础学习。Vue、React、JS 等是以把控全局的目的去了解，使用，并且前端技术总是能很快的带来成就感，写的代码立马能看到效果，并且很漂亮。至于一些比较旧的技术，如 SVN，MemoryCache 完全不了解，我参加工作的时间决定了我没法去了解和使用这些技术。
+
+  - ID : collapseEight
+    title : 我怎么看技术
+    content : 我从实习开始一直从事 Golang 相关编程工作，其在我心中地位不可动摇。但是我很明白，程序员不可能只靠一门语言，也不是靠某一项技术。当我看到 Windows 可以安装 Linux、MacOS；MacOS 可以安装 Linux、Windwos；Linux 可以安装 Linux；Node 可以写后端；WebAssembly 可以使用任意语言写前端，应用和操作系统的界限逐渐模糊，语言的界限逐渐模糊，我已经意识到，时代变了，谷歌的推动的出海三件套，Docker(工人)，Kubernetes(舵手)，Istio(起航)，一个新时代已经开启。但我们的初心其实并没有改变：用户给我们什么？而我们又给用户什么？所有的系统，框架，语言都在为这两件事服务；就像 IO 接口，只需要关心两件事，得到什么？输出什么？就像二进制，只有两种情况 1 和 0，人类的本质又是什么呢？

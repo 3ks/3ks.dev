@@ -31,11 +31,12 @@
                     return false;
                 }
             })
-            .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
-                return $( "<li>" )
-                .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.label + "</a>" )
-                .appendTo( ul );
-            };
+                // todo del
+            // .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+            //     return $( "<li>" )
+            //     .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.label + "</a>" )
+            //     .appendTo( ul );
+            // };
             });
         </script>
         </div>

@@ -1,10 +1,10 @@
 ---
 date: 2017-03-02T12:00:00-05:00
 title: "Golang"
-description: "恰饭"
-featured_image: 'https://cdn.sguan.top/markdown/20190829/mX8576UIPgcS.jpg?imageslim'
+description: "初恋&饭碗"
+image: 'https://static.sguan.top/category/20-go.png?imageslim'
 type: "pages"
 author: "the-origin"
 weight: 20
-icon: "ti-panel"
+icon: "icon-bowl"
 ---

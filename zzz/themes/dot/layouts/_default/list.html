@@ -1,49 +1,52 @@
 {{ define "main" }}
 
   {{ "<!-- page title -->" | safeHTML }}
-  <section class="section bg-dark" data-background="{{ .Params.Image }}">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-<!--          {{ with .Site.Params.banner.title }} <h1 class="text-white mb-4">{{ . }}</h1> {{ end }}-->
-          <h1 class="text-white mb-4">{{ .Title }}</h1>
-          <p class="text-white mb-4">{{ .Description }}</p>
-          {{ with .Site.Params.banner.placeholder }} <input id="search" class="form-control" placeholder="{{ . }}"> {{ end }}
-            {{ "<!-- Javascript -->" | safeHTML }}
-            <script>
-              $(function() {
-                var projects = [
-                  {{ range .Data.Pages }}
-                    {
-                      value: "{{ .Title }}",
-                      label: "{{ .Title }}",
-                      url:"{{ .Permalink }}"
-                    },
-                  {{ end }}
-                ];
-                $( "#search" ).autocomplete({
-                    minLength: 0,
-                    source: projects,
-                    focus: function( event, ui ) {
-                      $( "#search" ).val( ui.item.label );
-                        return false;
-                    },
-                    select: function( event, ui ) {
-                      $( "#search" ).val( ui.item.label );
-                      $( "#project-id" ).val( ui.item.value );
-                      return false;
-                    }
-                })
-                .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
-                  return $( "<li>" )
-                  .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.label + "</a>" )
-                  .appendTo( ul );
-                };
-              });
-            </script>
+  <section class="bg-cover section-img" data-background="{{ .Params.Image }}">
+      <section class="section section-type">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+    <!--          {{ with .Site.Params.banner.title }} <h1 class="text-white mb-4">{{ . }}</h1> {{ end }}-->
+              <h1 class="text-white mb-4">{{ .Title }}</h1>
+              <p class="text-white mb-4">{{ .Description }}</p>
+              {{ with .Site.Params.banner.placeholder }} <input id="search" class="form-control" placeholder="{{ . }}"> {{ end }}
+                {{ "<!-- Javascript -->" | safeHTML }}
+                <script>
+                  $(function() {
+                    var projects = [
+                      {{ range .Data.Pages }}
+                        {
+                          value: "{{ .Title }}",
+                          label: "{{ .Title }}",
+                          url:"{{ .Permalink }}"
+                        },
+                      {{ end }}
+                    ];
+                    $( "#search" ).autocomplete({
+                        minLength: 0,
+                        source: projects,
+                        focus: function( event, ui ) {
+                          $( "#search" ).val( ui.item.label );
+                            return false;
+                        },
+                        select: function( event, ui ) {
+                          $( "#search" ).val( ui.item.label );
+                          $( "#project-id" ).val( ui.item.value );
+                          return false;
+                        }
+                    })
+                        // todo del
+                    // .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+                    //   return $( "<li>" )
+                    //   .append( "<a href=" + item.url + " + \" &quot;\" +  >" + item.label + "</a>" )
+                    //   .appendTo( ul );
+                    // };
+                  });
+                </script>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
   </section>
   {{ "<!-- /page title -->" | safeHTML }}
 
@@ -67,7 +70,7 @@
           <div class="p-5 bg-white">
               <h2>{{ .Title }}</h2>
               <div class="bg-gray p-4">
-                  <h3 class="mt-0">文章列表：</h3>
+                  <h3 class="mt-0">相关文章：</h3>
                   <ul class="list-unstyled">
                     {{ range .Data.Pages }}
                     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>

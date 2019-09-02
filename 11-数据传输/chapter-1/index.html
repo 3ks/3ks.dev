@@ -10,9 +10,11 @@
   
   <!-- ** Plugins Needed for the Project ** -->
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://static.sguan.top/plugins/bootstrap/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <!-- themefy-icon -->
-  <link rel="stylesheet" href="https://static.sguan.top/plugins/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="https://static.sguan.top/plugins/icons/iconfont.css">
+
   <!-- highlight -->
   <link rel="stylesheet" href="https://static.sguan.top/plugins/highlight/hybrid.css">
   <!-- fonts -->
@@ -35,10 +37,12 @@
   <link rel="stylesheet" href="https://static.sguan.top/css/style.min.css" integrity="" media="screen">
 
   <!-- jquiry -->
-  <script src="https://static.sguan.top/plugins/jquery/jquery-1.12.4.js"></script>
+
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- jquary ui -->
-  <script src="https://static.sguan.top/plugins/jquery/jquery-ui.js"></script>
+
+  <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css"></script>
 
   <!--Favicon-->
 
@@ -67,7 +71,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
-          分类
+          文章
         </a>
         <div class="dropdown-menu" >
           
@@ -111,6 +115,8 @@
       </li>
       
       
+
+      
     </ul>
     
     <ul class="list-inline text-center mb-0">
@@ -134,48 +140,26 @@
             <li class=""><a href="/00-windows">Windows</a>
               <ul class="">
             <li class=""><a href="/00-windows/1-windows">快速装机手册</a>
-            </li>
-            <li class=""><a href="/00-windows/2-tips">一些小技巧</a>
             </li></ul>
               
             </li>
             <li class=""><a href="/01-linux">Linux</a>
               <ul class="">
-            <li class=""><a href="/01-linux/1-装机">装机</a>
+            <li class=""><a href="/01-linux/1-linux">装机</a>
             </li>
-            <li class=""><a href="/01-linux/2-科学上网">科学上网技术是第一生产力</a>
+            <li class=""><a href="/01-linux/2-centos">CentOS</a>
             </li></ul>
               
             </li>
             <li class=""><a href="/02-架构">架构</a>
-              <ul class="">
-            <li class=""><a href="/02-架构/chapter-1">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/03-docker">Docker</a>
-              <ul class="">
-            <li class=""><a href="/03-docker/chapter-1">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/04-k8s">K8S</a>
-              <ul class="">
-            <li class=""><a href="/04-k8s/chapter-1">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/05-istio">Istio</a>
-              <ul class="">
-            <li class=""><a href="/05-istio/chapter-1">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/10-git">Git</a>
-              <ul class="">
-            <li class=""><a href="/10-git/chapter-1">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class="parent d-block "><a href="/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/">数据传输</a>
               <ul class="sub-menu">
@@ -184,46 +168,18 @@
               
             </li>
             <li class=""><a href="/12-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/">数据存储</a>
-              <ul class="">
-            <li class=""><a href="/12-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/chapter-1/">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/13-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">数据结构和算法</a>
-              <ul class="">
-            <li class=""><a href="/13-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/chapter-1/">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/20-golang/">Golang</a>
-              <ul class="">
-            <li class=""><a href="/20-golang/chapter-1/">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/21-python/">Python</a>
-              <ul class="">
-            <li class=""><a href="/21-python/chapter-1/">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/22-java/">Java</a>
-              <ul class="">
-            <li class=""><a href="/22-java/chapter-1/">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/30-react/">React</a>
-              <ul class="">
-            <li class=""><a href="/30-react/chapter-1/">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/31-vue/">Vue</a>
-              <ul class="">
-            <li class=""><a href="/31-vue/chapter-1/">QUIC</a>
-            </li></ul>
-              
             </li>
             <li class=""><a href="/faq/">有什么想要问我吗？</a>
             </li></ul>
@@ -499,7 +455,7 @@ errors /root/log/error.log
 
 <h1 id="最后">最后</h1>
 
-<p>昨晚与<code>Go语言中文网站长</code><a href="https://studygolang.com/user/polaris">polaris</a>语音聊了一个多小时，认识到自己真的是太菜了，需要学习的东西还有很多。最后聊到了写博客，站长建议我写博客，看了看自己Go方面的笔记实在是没啥营养，感觉自己这篇部署HTTPS&amp;QUIC的文章可能比较实用，大家搭建博客的时候可以用到，所以将它分享出来。</p>
+<p>昨晚与<code>Go语言中文网站长</code><a href="https://studygolang.com/user/polaris">polaris</a>语音聊了一个多小时，认识到自己真的是太菜了，需要学习的东西还有很多。最后聊到了写博客，站长建议我写博客，看了看自己Go方面的文章实在是没啥营养，感觉自己这篇部署HTTPS&amp;QUIC的文章可能比较实用，大家搭建博客的时候可以用到，所以将它分享出来。</p>
 
 <p>写到这里发现很多自己了解的东西，想把它表达清楚确实是还需要去理解一些深层次的东西以及锻炼口头表达能力才行。这两篇文章有很多地方表达不够清除、准确、严谨，后续会继续完善，修改的，欢迎各位看官一起交流，指点。</p>
 
@@ -523,18 +479,38 @@ errors /root/log/error.log
 
 
 <!-- footer -->
-<footer class="section bg-gray pb-0">
+<footer class="section pb-0 bg-dark">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 text-md-left text-center">
-        <p>由 Hugo 强力驱动  •  基于 Dot 主题修改</p> 
-      </div>
-      <div class="col-md-4 text-md-right text-center">
+      <div class="col-md-12 text-md-center text-center">
         <ul class="list-inline mb-3">
           
-          <li class="list-inline-item"><a class="text-color d-inline-block p-2" href="https://github.com/the-origin"><i class="ti-github"></i></a></li>
+          <li class="list-inline-item">
+            <a class="icon iconfont d-block mb-3" href="https://github.com/the-origin">
+              <i class="icon-git1 link-icon"></i>
+            </a>
+          </li>
+          
+          <li class="list-inline-item">
+            <a class="icon iconfont d-block mb-3" href="https://space.bilibili.com/23240782">
+              <i class="icon-bilibili link-icon"></i>
+            </a>
+          </li>
           
         </ul>
+      </div>
+      <div class="col-md-12 text-md-center text-center">
+
+
+
+        <p class=" text-white">
+          2019-2019 Copyright © <a  class="link-word" href="https://www.1996.live/">1996.live</a> TheOrigin 博客<br>
+
+          由 <a  class="link-word" href="https://gohugo.io/">Hugo 0.57.2</a> 强力驱动  •
+          基于 <a  class="link-word" href="https://themes.gohugo.io/dot-hugo-documentation-theme/">Dot</a> 主题修改 •
+          采用 <a  class="link-word" href="https://www.qiniu.com/">七牛云</a>  CDN
+          <br><br>
+        </p>
       </div>
     </div>
   </div>
@@ -542,7 +518,8 @@ errors /root/log/error.log
 <!-- /footer -->
 
 <!-- Bootstrap JS -->
-<script src="https://static.sguan.top/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- highlight -->
 <script src="https://static.sguan.top/plugins/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
