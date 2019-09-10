@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vue on TheOrigin</title>
-    <link>https://www.1996.live/31-vue/</link>
+    <link>https://www.2018.io/31-vue/</link>
     <description>Recent content in Vue on TheOrigin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>由 Hugo 强力驱动  •  基于 Dot 主题修改</copyright>
     <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
     
-	<atom:link href="https://www.1996.live/31-vue/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.2018.io/31-vue/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

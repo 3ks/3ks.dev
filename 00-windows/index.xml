@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on TheOrigin</title>
-    <link>https://www.1996.live/00-windows/</link>
+    <link>https://www.2018.io/00-windows/</link>
     <description>Recent content in Windows on TheOrigin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>由 Hugo 强力驱动  •  基于 Dot 主题修改</copyright>
     
-	<atom:link href="https://www.1996.live/00-windows/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.2018.io/00-windows/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>快速装机手册</title>
-      <link>https://www.1996.live/00-windows/1-windows/</link>
+      <link>https://www.2018.io/00-windows/1-windows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.1996.live/00-windows/1-windows/</guid>
+      <guid>https://www.2018.io/00-windows/1-windows/</guid>
       <description>折腾 虽然我每次装完系统，都会给系统做备份，但是我基本上从来不用备份，因为我总是喜欢装最新版本的操作系统，并且也记不清对以前备份的系统做了些什么，然后每次装个新系统老是要想半天这次又要装些什么软件呢？所以这个文章就诞生了，记录一下我对一个纯净的操作系统做了些什么~
  内容可能会根据工作的内容的变化而变化
  Windows10:Latest  可以在系统镜像文件夹下找到，也可以前往https://msdn.itellyou.cn/查看是否有新版本发布。 安装完系统后，首先卸载掉一堆不需要的Win10自带应用 鲁大师，安装驱动。 有道云文章，微信扫码登录，拿到这个文章，开始照着列表安装程序。   如果网络不方便，请前往d:/soft/1-base/安装历史版本

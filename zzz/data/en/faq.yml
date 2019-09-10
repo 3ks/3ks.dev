@@ -5,7 +5,7 @@ faqItem:
 
   - ID : collapseTwo
     title : 爱好
-    content : 运动，做饭，做清洁，逛 B 站，探索新鲜事物。
+    content : 运动，做饭，做清洁，逛 B 站，DIY 硬件，探索新鲜事物。
 
   - ID : collapseThree
     title : 目前就职
@@ -13,7 +13,7 @@ faqItem:
 
   - ID : collapseFour
     title : 工作经验
-    content : 2019 年 7 月份正式成为一名社畜。
+    content : 2018 年 8月 开始实习，2019 年 7 月份正式成为一名社畜。
 
   - ID : collapseFive
     title : 2020 年目标
@@ -25,7 +25,7 @@ faqItem:
 
   - ID : collapseSeven
     title : 我的技术栈
-    content : Golang,Mysql,Linux 已经可以完成我目前的工作了，但是我对于新鲜事物很感兴趣，并了解了大量工作不会用到，但我认为有用、有前景的技术，我的技术栈不是杂，只是因为我有了解每个环节的强迫症。真爱是 Golang，Docker、Kubernetes、Istio 等都是生态相关产品。Linux、Mysql、PostgreSql、Redis，ElastaticSearch、HBase、Shell、Python、Lua、Nginx、Caddy  等作为通用基础学习。Vue、React、JS 等是以把控全局的目的去了解，使用，并且前端技术总是能很快的带来成就感，写的代码立马能看到效果，并且很漂亮。至于一些比较旧的技术，如 SVN，MemoryCache 完全不了解，我参加工作的时间决定了我没法去了解和使用这些技术。
+    content : Golang,Mysql,Linux 已经可以完成我目前的工作了，但是我对于新鲜事物很感兴趣，并了解了大量工作不会用到，但我认为有用、有前景的技术，我的技术栈不是杂，我只是热爱。真爱是 Golang，Docker、Kubernetes、Istio 等都是其生态相关产品。Linux、Mysql、PostgreSql、Redis，ElastaticSearch、HBase、Shell、Python、Lua、Nginx、Caddy  等作为通用基础学习。Vue、React、JS 等是以把控全局的目的去了解，使用，并且前端技术总是能很快的带来成就感，写的代码立马能看到效果，并且很漂亮。至于一些比较旧的技术，如 SVN，MemoryCache 完全不了解，我参加工作的时间决定了我没法去了解和使用这些技术。
 
   - ID : collapseEight
     title : 我怎么看技术
