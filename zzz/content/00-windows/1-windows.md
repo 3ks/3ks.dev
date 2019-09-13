@@ -40,7 +40,6 @@ weight: 1
 - [PanDownload](http://pandownload.com/)
 - [TIM](https://tim.qq.com/)
 - [Office365](https://www.office.com)
-> Office365需要先登录，才能获取下载程序，账号：21534@vol.365pro.me  密码：gg123..0.
 - [MPic](http://mpic.lzhaofu.cn/)
 
 # 可选软件
