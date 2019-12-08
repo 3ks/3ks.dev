@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on TheOrigin</title>
-    <link>https://www.2018.io/01-linux/</link>
+    <link>https://www.gorda.io/01-linux/</link>
     <description>Recent content in Linux on TheOrigin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>由 Hugo 强力驱动  •  基于 Dot 主题修改</copyright>
     <lastBuildDate>Sun, 09 Apr 2017 10:58:08 -0400</lastBuildDate>
     
-	<atom:link href="https://www.2018.io/01-linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.gorda.io/01-linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>装机</title>
-      <link>https://www.2018.io/01-linux/1-linux/</link>
+      <link>https://www.gorda.io/01-linux/1-linux/</link>
       <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
       
-      <guid>https://www.2018.io/01-linux/1-linux/</guid>
+      <guid>https://www.gorda.io/01-linux/1-linux/</guid>
       <description>安装 SSR 服务端 科学上网的服务端使用一键脚本安装(脚本可能会失效)
  SSR脚本
  wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ssrmu.sh &amp;amp;&amp;amp; chmod +x ssrmu.sh &amp;amp;&amp;amp; bash ssrmu.sh
@@ -25,25 +25,23 @@
  wget --no-check-certificate http://www.vpsrb.com/files/centos_bbr.sh &amp;amp;&amp;amp; chmod +x centos_bbr.sh &amp;amp;&amp;amp; ./centos_bbr.sh
  如果在线链接失效，可以手动创建脚本文件centos_bbr.sh，复制BBR脚本文件.md的内容,然后执行chmod +x centos_bbr.sh &amp;amp;&amp;amp; ./centos_bbr.sh  collapsible markdown?  可以保存为 /etc/shadowsocks.json
  3. 安装 Python (如果没安装) yum install -y python
-4. 运行 SSR  切换至刚刚下载的文件夹 shadowsocksr/shadowsocks/ 运行 python local.py -c /etc/shadowsocks.</description>
+4. 运行 SSR  切换至刚刚下载的文件夹 shadowsocksr/shadowsocks/ 运行 python local.py -c /etc/shadowsocks.json   出现类似下面的提示，表示运行成功</description>
     </item>
     
     <item>
       <title>CentOS</title>
-      <link>https://www.2018.io/01-linux/2-centos/</link>
+      <link>https://www.gorda.io/01-linux/2-centos/</link>
       <pubDate>Sun, 09 Apr 2017 10:58:08 -0400</pubDate>
       
-      <guid>https://www.2018.io/01-linux/2-centos/</guid>
+      <guid>https://www.gorda.io/01-linux/2-centos/</guid>
       <description>申请swap空间 云服务内存不够，也没有自动分配swap空间，我们可以自己分配swap空间作为缓存，感觉swap类似windows里的虚拟内存。
  我因为没有swap空间，导致mysql服务器无法启动
-  df -h &amp;gt; 获取硬盘设备路径
- sudo dd if=/dev/vda1 of=/swapfile count=4096 bs=1MiB &amp;gt; 分配空间4G &amp;gt; 官方的sudo fallocate -l 4G /swapfile是错误的，评论区出人才！
- sudo chmod 600 /swapfile &amp;gt; 权限设置
- sudo mkswap /swapfile &amp;gt; 制作swap系统，如果成功会有一个类似下面的提示
-Setting up swapspace version 1, size = 4194300 KiB no label, UUID=b99230bb-21af-47bc-8c37-de41129c39bf  sudo swapon /swapfile &amp;gt; 启动swap
- free -m &amp;gt; 可以看到swap是否已经在运行了
- sudo vi /etc/sysctl.conf &amp;gt; 在文件末尾追加内容
-/swapfile swap swap sw 0 0  保存提出即可。</description>
+  df -h   获取硬盘设备路径
+  sudo dd if=/dev/vda1 of=/swapfile count=4096 bs=1MiB   分配空间4G 官方的sudo fallocate -l 4G /swapfile是错误的，评论区出人才！
+  sudo chmod 600 /swapfile   权限设置
+  sudo mkswap /swapfile   制作swap系统，如果成功会有一个类似下面的提示
+ Setting up swapspace version 1, size = 4194300 KiB no label, UUID=b99230bb-21af-47bc-8c37-de41129c39bf  sudo swapon /swapfile   启动swap
+  free -m   可以看到swap是否已经在运行了</description>
     </item>
     
   </channel>

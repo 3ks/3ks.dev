@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Java on TheOrigin</title>
-    <link>https://www.2018.io/22-java/</link>
+    <link>https://www.gorda.io/22-java/</link>
     <description>Recent content in Java on TheOrigin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>由 Hugo 强力驱动  •  基于 Dot 主题修改</copyright>
     <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate>
     
-	<atom:link href="https://www.2018.io/22-java/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.gorda.io/22-java/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

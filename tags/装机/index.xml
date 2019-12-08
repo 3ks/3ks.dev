@@ -1,42 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>装机 on TheOrigin</title>
-    <link>https://www.2018.io/tags/%E8%A3%85%E6%9C%BA/</link>
+    <link>https://www.gorda.io/tags/%E8%A3%85%E6%9C%BA/</link>
     <description>Recent content in 装机 on TheOrigin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>由 Hugo 强力驱动  •  基于 Dot 主题修改</copyright>
     <lastBuildDate>Tue, 09 Apr 2019 10:58:08 -0400</lastBuildDate>
     
-	<atom:link href="https://www.2018.io/tags/%E8%A3%85%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.gorda.io/tags/%E8%A3%85%E6%9C%BA/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>QUIC</title>
-      <link>https://www.2018.io/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/chapter-1/</link>
+      <link>https://www.gorda.io/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/chapter-1/</link>
       <pubDate>Tue, 09 Apr 2019 10:58:08 -0400</pubDate>
       
-      <guid>https://www.2018.io/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/chapter-1/</guid>
-      <description>前言  emmm~,今天是9102年儿童节，都9102年了，你的网站还是万年HTTP吗，Chrome已经看你不爽很久了，得益于Let&amp;rsquo;s Encrypt，现在申请TLS证书变得异常简单。   本文将分享我是如何开启整站HTTPS和QUIC，网上关于QUIC的介绍文章挺多的，既然你在看这篇文章，相信是对QUIC有一定了解的，本文不在做重复介绍相关概念。 网上的很多文章教程略微复杂，本文将带领你从0开始部署，大学生都学得会。 本文使用的浏览器是Chrome73，协议是QUIC43。最终效果如下。  前置条件 虽然说是从0开始，但是你还是得准备一些东西：
- 有一定的Linux基础，至少要能跟着做吧~ 拥有或注册一个自己的域名。 拥有一台服务器，需要将域名解析到该服务器。 安装 Docker&amp;amp;Docker-compose环境，这会使整个过程变得非常简单，花几分钟安装Docker是值得的，如果不会的同学，请参考前面的教程，安装Docker。  DNS解析  如果你知道如何配置DNS，可以跳过 主机记录@，记录类型A，记录值你的服务器公网IP地址。 主机记录*，记录类型CNAME，记录值你域名(末尾有个.) 大概就是下面这个样子。   注意  这里我默认你已经安装好了Docker以及Docker-compose，即将会使用到该工具，如果没有正确安装，请看安装这两个工具的教程。 后续操作我是在CentOS7下面进行的，请确保你的账号有足够的权限(root)  准备配置文件  mkdir -p /containers/caddy cd /containers/caddy vi docker-compose.yml
-version: &#39;2&#39; services: caddy-server: image: abiosoft/caddy:latest container_name: caddy-server ports: - &amp;quot;443:443/udp&amp;quot; - &amp;quot;443:443&amp;quot; - &amp;quot;80:80&amp;quot; volumes: - &amp;quot;/containers/caddy/Caddyfile:/etc/Caddyfile&amp;quot; - &amp;quot;/containers/caddy/.caddy:/root/.caddy&amp;quot; - &amp;quot;/containers/caddy/log:/root/log&amp;quot; - &amp;quot;/containers/caddy/www:/www&amp;quot; restart: always entrypoint : &amp;quot;tail -f /dev/null&amp;quot;  保存退出</description>
+      <guid>https://www.gorda.io/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/chapter-1/</guid>
+      <description>前言  emmm~,今天是9102年儿童节，都9102年了，你的网站还是万年HTTP吗，Chrome已经看你不爽很久了，得益于Let&#39;s Encrypt，现在申请TLS证书变得异常简单。   本文将分享我是如何开启整站HTTPS和QUIC，网上关于QUIC的介绍文章挺多的，既然你在看这篇文章，相信是对QUIC有一定了解的，本文不在做重复介绍相关概念。 网上的很多文章教程略微复杂，本文将带领你从0开始部署，大学生都学得会。 本文使用的浏览器是Chrome73，协议是QUIC43。最终效果如下。  前置条件 虽然说是从0开始，但是你还是得准备一些东西：
+ 有一定的Linux基础，至少要能跟着做吧~ 拥有或注册一个自己的域名。 拥有一台服务器，需要将域名解析到该服务器。 安装 Docker&amp;amp;Docker-compose环境，这会使整个过程变得非常简单，花几分钟安装Docker是值得的，如果不会的同学，请参考前面的教程，安装Docker。  DNS解析  如果你知道如何配置DNS，可以跳过 主机记录@，记录类型A，记录值你的服务器公网IP地址。 主机记录*，记录类型CNAME，记录值你域名(末尾有个.) 大概就是下面这个样子。   注意  这里我默认你已经安装好了Docker以及Docker-compose，即将会使用到该工具，如果没有正确安装，请看安装这两个工具的教程。 后续操作我是在CentOS7下面进行的，请确保你的账号有足够的权限(root)  准备配置文件  mkdir -p /containers/caddy cd /containers/caddy vi docker-compose.yml  version: &#39;2&#39; services: caddy-server: image: abiosoft/caddy:latest container_name: caddy-server ports: - &amp;quot;443:443/udp&amp;quot; - &amp;quot;443:443&amp;quot; - &amp;quot;80:80&amp;quot; volumes: - &amp;quot;/containers/caddy/Caddyfile:/etc/Caddyfile&amp;quot; - &amp;quot;/containers/caddy/.caddy:/root/.caddy&amp;quot; - &amp;quot;/containers/caddy/log:/root/log&amp;quot; - &amp;quot;/containers/caddy/www:/www&amp;quot; restart: always entrypoint : &amp;quot;tail -f /dev/null&amp;quot;   保存退出</description>
     </item>
     
     <item>
       <title>快速装机手册</title>
-      <link>https://www.2018.io/00-windows/1-windows/</link>
+      <link>https://www.gorda.io/00-windows/1-windows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.2018.io/00-windows/1-windows/</guid>
+      <guid>https://www.gorda.io/00-windows/1-windows/</guid>
       <description>折腾 虽然我每次装完系统，都会给系统做备份，但是我基本上从来不用备份，因为我总是喜欢装最新版本的操作系统，并且也记不清对以前备份的系统做了些什么，然后每次装个新系统老是要想半天这次又要装些什么软件呢？所以这个文章就诞生了，记录一下我对一个纯净的操作系统做了些什么~
  内容可能会根据工作的内容的变化而变化
  Windows10:Latest  可以在系统镜像文件夹下找到，也可以前往https://msdn.itellyou.cn/查看是否有新版本发布。 安装完系统后，首先卸载掉一堆不需要的Win10自带应用 鲁大师，安装驱动。 有道云文章，微信扫码登录，拿到这个文章，开始照着列表安装程序。   如果网络不方便，请前往d:/soft/1-base/安装历史版本
-如果网卡不能免驱，请前往d:/soft/1-base/安装驱动精灵万能网卡版
+  如果网卡不能免驱，请前往d:/soft/1-base/安装驱动精灵万能网卡版
  常用软件 下述软件如果没有没有提供下载链接，或者下载链接失效，无法访问下载链接，请直接前往d:/soft/1-base使用安装包安装。
  ShadowSockesR SSTap WinRarX64 Or WinRarX86 IDM BitComet Chrome DISM++ 网易云音乐 有道词典 Potplayer PanDownload TIM Office365 MPic  可选软件 下述软件如果没有没有提供下载链接，或者下载链接失效，无法访问下载链接，请直接前往d:/soft/2-option使用安装包安装。
- FireFox 迅雷X &amp;gt; 如果有会员最好安装迅雷U享版 MacType G302 Driver Adobe旗下软件，禁用网卡破解安装~ Cpu-z Gpu-z 阿里旺旺 WeGame Steam OBS 三星固态硬盘管理软件 Foxmail  通用开发工具 下述软件如果没有没有提供下载链接，或者下载链接失效，无法访问下载链接，请直接前往d:/soft/3-common使用安装包安装。
- VMware15 Navicat Putty Redis Desktop Manager &amp;gt; 这个下载好像有点麻烦，考虑本地安装包或者换一个？ NotePad++ Git GitKraken   Go 下述软件如果没有没有提供下载链接，或者下载链接失效，无法访问下载链接，请直接前往d:/soft/4-go使用安装包安装。</description>
+ FireFox 迅雷X   如果有会员最好安装迅雷U享版
+  MacType G302 Driver Adobe旗下软件，禁用网卡破解安装~ Cpu-z Gpu-z 阿里旺旺 WeGame Steam OBS 三星固态硬盘管理软件 Foxmail  通用开发工具 下述软件如果没有没有提供下载链接，或者下载链接失效，无法访问下载链接，请直接前往d:/soft/3-common使用安装包安装。
+ VMware15 Navicat Putty Redis Desktop Manager   这个下载好像有点麻烦，考虑本地安装包或者换一个？</description>
     </item>
     
   </channel>

@@ -1,131 +1,131 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.2018.io/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/chapter-1/</loc>
+    <loc>https://www.gorda.io/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/chapter-1/</loc>
     <lastmod>2019-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/01-linux/1-linux/</loc>
+    <loc>https://www.gorda.io/01-linux/1-linux/</loc>
     <lastmod>2017-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/00-windows/</loc>
+    <loc>https://www.gorda.io/00-windows/</loc>
   </url>
   
   <url>
-    <loc>https://www.2018.io/00-windows/1-windows/</loc>
+    <loc>https://www.gorda.io/00-windows/1-windows/</loc>
   </url>
   
   <url>
-    <loc>https://www.2018.io/01-linux/2-centos/</loc>
+    <loc>https://www.gorda.io/01-linux/2-centos/</loc>
     <lastmod>2017-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/01-linux/</loc>
+    <loc>https://www.gorda.io/01-linux/</loc>
     <lastmod>2017-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/02-%E6%9E%B6%E6%9E%84/</loc>
+    <loc>https://www.gorda.io/02-%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/03-docker/</loc>
+    <loc>https://www.gorda.io/03-docker/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/04-k8s/</loc>
+    <loc>https://www.gorda.io/04-k8s/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/05-istio/</loc>
+    <loc>https://www.gorda.io/05-istio/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/10-git/</loc>
+    <loc>https://www.gorda.io/10-git/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/</loc>
+    <loc>https://www.gorda.io/11-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/12-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/</loc>
+    <loc>https://www.gorda.io/12-%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/13-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://www.gorda.io/13-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/20-golang/</loc>
+    <loc>https://www.gorda.io/20-golang/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/21-python/</loc>
+    <loc>https://www.gorda.io/21-python/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/22-java/</loc>
+    <loc>https://www.gorda.io/22-java/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/30-react/</loc>
+    <loc>https://www.gorda.io/30-react/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/31-vue/</loc>
+    <loc>https://www.gorda.io/31-vue/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/tags/</loc>
+    <loc>https://www.gorda.io/tags/</loc>
     <lastmod>2019-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/</loc>
+    <loc>https://www.gorda.io/</loc>
     <lastmod>2019-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/tags/windows/</loc>
+    <loc>https://www.gorda.io/tags/windows/</loc>
     <lastmod>2019-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/tags/%E8%A3%85%E6%9C%BA/</loc>
+    <loc>https://www.gorda.io/tags/%E8%A3%85%E6%9C%BA/</loc>
     <lastmod>2019-04-09T10:58:08-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/faq/</loc>
+    <loc>https://www.gorda.io/faq/</loc>
     <lastmod>2018-12-27T09:10:27+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.2018.io/categories/</loc>
+    <loc>https://www.gorda.io/categories/</loc>
   </url>
   
   <url>
-    <loc>https://www.2018.io/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://www.gorda.io/tags/%E8%BD%AF%E4%BB%B6/</loc>
   </url>
   
 </urlset>
