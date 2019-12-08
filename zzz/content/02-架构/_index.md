@@ -4,7 +4,7 @@ title: "架构"
 description: "吃菜啊，别光喝酒"
 image: 'https://static.sguan.top/category/02-yin.jpg?imageslim'
 type: "pages"
-author: "the-origin"
+author: "gorda"
 weight: 2
 icon: "icon-galaxy"
 ---

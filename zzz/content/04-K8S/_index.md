@@ -4,7 +4,7 @@ title: "K8S"
 description: "你的容器需要一个管家"
 image: 'https://static.sguan.top/category/04-k8s.png?imageslim'
 type: "pages"
-author: "the-origin"
+author: "gorda"
 weight: 4
 icon: "icon-kubernetes"
 ---

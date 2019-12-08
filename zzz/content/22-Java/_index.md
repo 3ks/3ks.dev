@@ -4,7 +4,7 @@ title: "Java"
 description: "大就完事，好不好不知道"
 image: 'https://static.sguan.top/category/22-java.jpg?imageslim'
 type: "pages"
-author: "the-origin"
+author: "gorda"
 weight: 23
 icon: "icon-java"
 ---

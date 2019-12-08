@@ -2,7 +2,7 @@
 date: 2019-08-031T12:00:00-04:00
 title: "快速装机手册"
 description: "windows 快速装机手册"
-author: "the-origin"
+author: "gorda"
 tags: ["windows","装机","软件"]
 type: "post"
 weight: 1

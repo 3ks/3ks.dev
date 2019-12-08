@@ -4,7 +4,7 @@ title: "Golang"
 description: "初恋&饭碗"
 image: 'https://static.sguan.top/category/20-go.png?imageslim'
 type: "pages"
-author: "the-origin"
+author: "gorda"
 weight: 20
 icon: "icon-bowl"
 ---

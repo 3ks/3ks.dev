@@ -17,10 +17,10 @@ static = "https://static.sguan.top/"
   languageName = "En"
   weight = 1
   languageCode = "zh-cn"
-  title = "TheOrigin"
+  title = "Gorda"
   dateFormat = "2006 January 2"
   home = "主页"
-  logo = "TheOrigin"
+  logo = "Gorda"
   copyright = "由 Hugo 强力驱动  •  基于 Dot 主题修改"
 
     # navigation
@@ -239,7 +239,7 @@ static = "https://static.sguan.top/"
     # 页脚社交联系logo
     [[Languages.en.socialIcon]]
       icon = "icon-git1"
-      URL = "https://github.com/the-origin"
+      URL = "https://github.com/gorda"
 
     [[Languages.en.socialIcon]]
       icon = "icon-bilibili"

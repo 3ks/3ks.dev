@@ -4,7 +4,7 @@ title: "数据传输"
 description: "等一下，我……我数据呢"
 image: 'https://static.sguan.top/category/11-network.jpg?imageslim'
 type: "pages"
-author: "the-origin"
+author: "gorda"
 weight: 11
 icon: "icon-transfer"
 ---

@@ -4,7 +4,7 @@ title: "Git"
 description: "告诉你，你是谁，你在哪，你要干什么"
 image: 'https://static.sguan.top/category/10-git.png?imageslim'
 type: "pages"
-author: "the-origin"
+author: "gorda"
 weight: 10
 icon: "icon-git"
 ---

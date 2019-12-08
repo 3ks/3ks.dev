@@ -4,7 +4,7 @@ title: "React"
 description: "梦里见过你"
 image: 'https://static.sguan.top/category/30-react.jpeg?imageslim'
 type: "pages"
-author: "the-origin"
+author: "gorda"
 weight: 30
 icon: "icon-react"
 ---

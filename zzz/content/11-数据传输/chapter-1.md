@@ -4,7 +4,7 @@ title: "QUIC"
 description: "QUIC"
 tags: ["windows","装机"]
 type: "post"
-author: "the-origin"
+author: "gorda"
 weight: 1
 ---
 

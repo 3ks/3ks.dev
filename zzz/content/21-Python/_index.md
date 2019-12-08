@@ -4,7 +4,7 @@ title: "Python"
 description: "人生苦短，我用 Python"
 image: 'https://static.sguan.top/category/21-python.png?imageslim'
 type: "pages"
-author: "the-origin"
+author: "gorda"
 weight: 21
 icon: "icon-python"
 ---

@@ -4,7 +4,7 @@ title: "Istio"
 description: "你的容器还需要一个保镖"
 image: 'https://static.sguan.top/category/05-istio.png?imageslim'
 type: "pages"
-author: "the-origin"
+author: "gorda"
 weight: 5
 icon: "icon-sailboat"
 ---

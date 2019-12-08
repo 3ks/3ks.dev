@@ -4,7 +4,7 @@ title: "Vue"
 description: "血统骄傲"
 image: 'https://static.sguan.top/category/31-vue.jpg?imageslim'
 type: "pages"
-author: "the-origin"
+author: "gorda"
 weight: 31
 icon: "icon-vuejs"
 ---
