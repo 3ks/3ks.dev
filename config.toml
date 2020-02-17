@@ -1,30 +1,47 @@
-#baseURL = "https://www.gorda.io/"
-baseURL = "http://localhost:1313/"
-
-languageCode = "en-us"
-title = "Lithium Theme"
 theme = "hugo-lithium-theme"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh-CN"
+hasCJKLanguage = true
+preserveTaxonomyNames = true
+paginate = 10
+paginatePath = "page"
+
+baseurl = "https://example.org"
+title = "Gorda"
+disableKinds = ["taxonomy", "taxonomyTerm", "section", "404"]
+
+enableRobotsTXT = false
 googleAnalytics = ""
 disqusShortname = ""
-disableKinds = ["taxonomy", "taxonomyTerm", "section", "404"]
+
 
 [permalinks]
     post = "/:year/:month/:day/:title/"
     page = "/:title/"
 
 [[menu.main]]
-    name = "About"
+    name = "主页"
+    weight = 1
+    url = "/"
+[[menu.main]]
+    name = "归档"
+    weight = 2
+    url = "archive/"
+[[menu.main]]
+    name = "Tag"
+    weight = 3
+    url = "tags/"
+[[menu.main]]
+    name = "实验室"
+    weight = 4
+    url = "/lab"
+[[menu.main]]
+    name = "关于我"
+    weight = 5
     url = "/about/"
-[[menu.main]]
-    name = "GitHub"
-    url = ""
-[[menu.main]]
-    name = "Twitter"
-    url = ""
 
 [params]
     mainSections = ["post"]
-
     description = ""
 
     # path to the favicon, under "static"
@@ -34,8 +51,7 @@ disableKinds = ["taxonomy", "taxonomyTerm", "section", "404"]
     url = "logo.png"
     width = 50
     height = 50
-    alt = "Logo"
+    alt = "Gorda logo"
 
     [params.icon]
     url = "favicon.ico"
-
