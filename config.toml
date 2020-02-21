@@ -1,4 +1,4 @@
-theme = "hugo-lithium-theme"
+theme = "less"
 languageCode = "zh-CN"
 defaultContentLanguage = "zh-CN"
 hasCJKLanguage = true
@@ -8,12 +8,13 @@ paginatePath = "page"
 
 baseurl = "https://example.org"
 title = "Gorda"
-disableKinds = ["taxonomy", "taxonomyTerm", "section", "404"]
 
 enableRobotsTXT = false
 googleAnalytics = ""
 disqusShortname = ""
 
+[taxonomies]
+  tag = "tags"
 
 [permalinks]
     post = "/:year/:month/:day/:title/"
@@ -23,18 +24,18 @@ disqusShortname = ""
     name = "主页"
     weight = 1
     url = "/"
-[[menu.main]]
-    name = "归档"
-    weight = 2
-    url = "archive/"
+#[[menu.main]]
+#    name = "归档"
+#    weight = 2
+#    url = "/archive/"
 [[menu.main]]
     name = "Tag"
     weight = 3
-    url = "tags/"
+    url = "/tags/"
 [[menu.main]]
     name = "实验室"
     weight = 4
-    url = "/lab"
+    url = "/labs/"
 [[menu.main]]
     name = "关于我"
     weight = 5
