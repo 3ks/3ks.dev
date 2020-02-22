@@ -364,6 +364,7 @@ img {
 
 
 .Tags a{
+  display: inline-block;
   text-decoration-line: none;
   padding: 14px 20px;
   margin: 5px;
