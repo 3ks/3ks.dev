@@ -66,7 +66,7 @@ PasswordAuthentication no #是否允许账号密码登录,根据自己情况选�
 
 7. 使用PuTTY Key Generator 生成适用于 Putty 的证书
 
-![mark](http://cdn.sguan.top/markdown/20181121/k1dWVLBE7vkr.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20181121/k1dWVLBE7vkr.png?imageslim)
 
 选中私钥文件，然后点击保存为私钥 `Save private key`
 
@@ -80,7 +80,7 @@ PasswordAuthentication no #是否允许账号密码登录,根据自己情况选�
  
  - `保存会话`，然后直接点击会话即可免密登录
  
-![mark](http://cdn.sguan.top/markdown/20181121/dzLoRV3Uzaao.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20181121/dzLoRV3Uzaao.png?imageslim)
 
 > 服务器存公钥，客户端存私钥
 

@@ -31,11 +31,11 @@ PasswordAuthentication  yes  #启用口令认证方式
  
 修改 79 行左右的 `GSSAPIAuthentication` 为 `no`
 
-![mark](http://cdn.sguan.top/markdown/20181121/qUFk9LenHzFh.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20181121/qUFk9LenHzFh.png?imageslim)
 
 修改 115 行左右的 `UseDNS` 为 `no`
 
-![mark](http://cdn.sguan.top/markdown/20181121/44XyVT15gM0Q.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20181121/44XyVT15gM0Q.png?imageslim)
 
 - systemctl restart sshd
 

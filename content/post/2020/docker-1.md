@@ -69,7 +69,7 @@ docker run hello-world
 
 下图表示 Docker 已成功安装并运行
 
-![mark](http://cdn.sguan.top/markdown/20181121/G02nYdGVa70I.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20181121/G02nYdGVa70I.png?imageslim)
 
 
 ### 镜像加速
@@ -120,7 +120,7 @@ sudo rm -rf /var/lib/docker
 
 > 安装完 docker 后使用出现下图的提示
 
-![mark](http://cdn.sguan.top/markdown/20181126/f5HU3ewRRcLd.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20181126/f5HU3ewRRcLd.png?imageslim)
 
  大意就是权限不够，可以使用 `root 账号` 运行 docker 或者将当前用户加入到 `docker 用户组`即可。
 

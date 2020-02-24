@@ -74,17 +74,17 @@ services :
 - 执行命令 `docker-compose up`
 - 正常情况下，我们Gitlab 服务会成功启动
 
-![服务启动](http://cdn.sguan.top/markdown/20190111/nfdBdi9DgSvJ.png?imageslim)
+![服务启动](https://cdn.sguan.top/markdown/20190111/nfdBdi9DgSvJ.png?imageslim)
 
 - 访问服务器`IP:8080`可以看到Gitlab的界面，则服务正常启动了，这可能需要等待几分钟的时间。
  
-![Gitlab界面](http://cdn.sguan.top/markdown/20190111/NYcnHQuNWAVE.png?imageslim)
+![Gitlab界面](https://cdn.sguan.top/markdown/20190111/NYcnHQuNWAVE.png?imageslim)
 
 - 第一次访问会强制要求修改密码，默认用户名为root，我这里将密码设为了`12345678`
 
 一个简单的本地 Gitlab 环境就完成了搭建,我们这里使用的是社区版 11.6.3
 
-![mark](http://cdn.sguan.top/markdown/20190118/nCsmJ6EqDeFK.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20190118/nCsmJ6EqDeFK.png?imageslim)
 
 # Gitlab CI 
 
@@ -92,7 +92,7 @@ services :
 
 要实现项目 CI/CD 等，我们需要先在 Gitlab 上有一个项目，可以新建，导入等多种方式，这里不详细讲解。
 
-![mark](http://cdn.sguan.top/markdown/20190118/MwngycAmuSMY.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20190118/MwngycAmuSMY.png?imageslim)
 
 ### Gitlab Runner
 
@@ -102,13 +102,13 @@ services :
 
 参考下图的顺序，依次展开 `Settings`->`CI/CD`->`Runners`->`Expand` 
 
-![mark](http://cdn.sguan.top/markdown/20190118/SNUELsNjc89R.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20190118/SNUELsNjc89R.png?imageslim)
 
 - Runner分为4种，这里我们注册的是 `Specific Runner` （其它的我暂时也不懂）。
  
 - 在这里可以看到 Gitlab 地址以及 Token,在注册 Runner 的时候会用到。
 
-![mark](http://cdn.sguan.top/markdown/20190118/jC3xOqeEwBtb.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20190118/jC3xOqeEwBtb.png?imageslim)
 
 - 注册 Runner 
 
@@ -121,7 +121,7 @@ docker exec -it gitlab-runner gitlab-ci-multi-runner register
 # Runner名称，描述，Tag(这里有个坑)，运行环境，默认镜像（如果运行环境是Docker）等
 ```
 
-![mark](http://cdn.sguan.top/markdown/20190118/bz6hbQkrVqSD.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20190118/bz6hbQkrVqSD.png?imageslim)
 
  `Tag`  不能乱填，可以暂时不填，后续详细说明
  
@@ -131,11 +131,11 @@ docker exec -it gitlab-runner gitlab-ci-multi-runner register
 
 然后可以看到提示注册成功，刷新 Gitlab 的网页界面，可以看到 Runner 出现了，另一个 Runner 是我之前注册的，不用管。
 
-![mark](http://cdn.sguan.top/markdown/20190118/V4gnMVuBwGdM.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20190118/V4gnMVuBwGdM.png?imageslim)
 
 > 一个坑，防火墙导致
 
-![mark](http://cdn.sguan.top/markdown/20190111/nbc0Te0W0Vse.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20190111/nbc0Te0W0Vse.png?imageslim)
 
 runner 无法注册，提示`no route to host`因为防火墙的原因，暂时关闭防火墙和 Selinux 即可，具体开放哪个端口有待研究
 

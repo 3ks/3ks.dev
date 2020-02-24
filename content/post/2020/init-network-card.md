@@ -29,7 +29,7 @@ CentOS 在刚刚装装好的时候 `可能` 存在没有启用网卡的情况，
 - reboot
 - ip addr
 
-![成功获取IP](http://cdn.sguan.top/markdown/20181121/3oXaX3jtuKGw.png?imageslim)
+![成功获取IP](https://cdn.sguan.top/markdown/20181121/3oXaX3jtuKGw.png?imageslim)
 
 # 配置静态 IP
 

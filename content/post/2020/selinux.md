@@ -22,7 +22,7 @@ CentOS7中，很多服务默认都会被SELinux阻止，如果程序异常应该
 
 `setenforce 0` 
 
-![mark](http://cdn.sguan.top/markdown/20190112/R9T7wHynmOQL.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20190112/R9T7wHynmOQL.png?imageslim)
 
 ### 参考链接
 

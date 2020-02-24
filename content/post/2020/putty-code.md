@@ -12,10 +12,10 @@ draft: false
 
 > 回退，方向键等乱码问题，按下图箭头所指设置即可
 
-![mark](http://cdn.sguan.top/markdown/20190112/FY22p1NYlmPR.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20190112/FY22p1NYlmPR.png?imageslim)
 
 > 小键盘等乱码问题，按下图设置箭头所指设置即可
 
-![mark](http://cdn.sguan.top/markdown/20190112/dB1nfLMoj6jO.png?imageslim)
+![mark](https://cdn.sguan.top/markdown/20190112/dB1nfLMoj6jO.png?imageslim)
 
 > 设置完记得保存 session
