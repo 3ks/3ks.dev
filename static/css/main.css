@@ -135,6 +135,19 @@ img {
   margin: 15px 0 25px;
 }
 
+.article-content ul code,.article-content p code{
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1;
+  overflow: hidden;
+  font-weight: bold;
+  color: #1b293a;
+  background: #5fffe3;
+  padding: 2px;
+  position: relative;
+  top: 5px;
+}
+
 .article-content a {
   text-decoration: none;
   color: #306bcc;
@@ -157,6 +170,19 @@ img {
   background: #e5e5e5;
 }
 
+.article-content blockquote{
+  margin: 10px 0px;
+  padding-left: 5px;
+  border-left: 3px solid #ccc;
+}
+
+.article-content blockquote p{
+  color: #ccc;
+}
+
+.article-content ul{
+  padding: 0px 15px;
+}
 .highlight {
   border-radius: 3px;
   position: relative;
