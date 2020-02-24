@@ -1,0 +1,126 @@
+---
+title: "SS 搭建说明"
+date: 2020-02-22T15:46:05+08:00
+tags: ["科学上网技术","SS","ShadowSocks"]
+draft: true
+ 
+---
+
+# 安装 SSR 服务端
+
+科学上网的服务端使用一键脚本安装(脚本可能会失效)
+
+> SSR脚本
+
+```bash
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh
+```
+
+- 如果在线链接失效，可以手动创建脚本文件`ssrmu.sh`，复制`蹄子脚本文件.md`的内容,然后执行`chmod +x ssrmu.sh && bash ssrmu.sh`
+
+> BBR脚本
+
+```bash
+wget --no-check-certificate http://www.vpsrb.com/files/centos_bbr.sh && chmod +x centos_bbr.sh && ./centos_bbr.sh
+```
+
+- 如果在线链接失效，可以手动创建脚本文件`centos_bbr.sh`，复制`BBR脚本文件.md`的内容,然后执行`chmod +x centos_bbr.sh && ./centos_bbr.sh`
+
+## collapsible markdown?
+    
+> 可以保存为 /etc/shadowsocks.json
+
+### 3. 安装 Python (如果没安装)
+
+`yum install -y python`
+
+### 4. 运行 SSR
+
+- 切换至刚刚下载的文件夹 `shadowsocksr/shadowsocks/`
+- 运行 `python local.py -c /etc/shadowsocks.json`
+
+> 出现类似下面的提示，表示运行成功
+
+```bash
+IPv6 support
+2018-11-19 14:10:03 INFO     util.py:85 loading libcrypto from libcrypto.so.10
+2018-11-19 14:10:03 INFO     local.py:50 local start with protocol[auth_aes128_md5] password [asldkfjlKJHLLJ] method [aes-256-cfb] obfs [plain] obfs_param []
+2018-11-19 14:10:03 INFO     local.py:54 starting local at 127.0.0.1:1080
+2018-11-19 14:10:03 INFO     asyncdns.py:324 dns server: [('192.168.190.2', 53)]
+```
+
+>  怎么配置后台运行呢？
+
+>  怎么配置代理模式呢？
+
+
+# 配置 HTTP/S FTP 代理
+
+1.  vim /etc/profile
+
+> 文件末尾追加内容 
+
+```
+https_proxy=192.168.190.2:1080
+http_proxy=192.168.190.2:1080
+ftp_proxy=192.168.190.2:1080
+export https_proxy
+export http_proxy
+export ftp_proxy
+```
+
+2.  source /etc/profile
+
+> 立即生效，不需要代理时需要注释或者删除配置代码，重复步骤2
+
+
+# 安装 SSR 客户端
+
+### 1. 下载 SSR 客户端
+
+```git clone https://github.com/ssrbackup/shadowsocksr```
+
+> 需要先安装 `Git`
+
+### 2. 创建填写配置文件
+
+vim /etc/shadowsocks.json
+```
+{
+    "server": "68.183.168.80",
+    "server_ipv6": "::",
+    "server_port": 2333,
+    "local_address": "127.0.0.1",
+    "local_port": 1080,
+    
+    "password": "asldkfjlKJHLLJ",
+    "method": "aes-256-cfb",
+    "protocol": "auth_aes128_md5",
+    "protocol_param": "",
+    "obfs": "plain",
+    "obfs_param": "",
+    "speed_limit_per_con": 0,
+    "speed_limit_per_user": 0,
+
+    "additional_ports" : {}, // only works under multi-user mode
+    "additional_ports_only" : false, // only works under multi-user mode
+    "timeout": 120,
+    "udp_timeout": 60,
+    "dns_ipv6": false,
+    "connect_verbose_info": 0,
+    "redirect": "",
+    "fast_open": false
+}
+```
+
+### 3.运行客户端 
+
+`nohup sslocal -c /etc/shadowsocks.json /dev/null 2>&1 &`
+
+# 参考连接
+
+[Linux 使用SSR客户端](https://mikoto10032.github.io/post/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%82%A3%E4%BA%9B%E4%BA%8B/linux%E4%BD%BF%E7%94%A8ssr%E5%AE%A2%E6%88%B7%E7%AB%AF/)
+
+[Centos 7安装Proxychains实现Linux 代理](http://www.harker.cn/archives/proxychains.html)
+
+[Centos7安装配置ss客户端](https://blog.whsir.com/post-2711.html)
