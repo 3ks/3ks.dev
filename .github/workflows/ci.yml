@@ -26,4 +26,4 @@ jobs:
       - name: Install-SSHPass
         run:  apt-get -y install sshpass
       - name: DeployToDO
-          run: mv ./public ./www && sshpass -p {{ secrets.DO_PWD }} scp -r ./www {{ secrets.DO_HOST }}
+          run: mv ./public ./www && sshpass -p ${{ secrets.DO_PWD }} scp -r ./www ${{ secrets.DO_HOST }}
