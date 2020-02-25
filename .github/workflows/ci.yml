@@ -23,7 +23,5 @@ jobs:
           external_repository: gorda/gorda.github.io
           publish_branch: master
           publish_dir: ./public
-      - name: Install-SSHPass
-        run:  apt-get -y install sshpass
       - name: DeployToDO
         run: echo {{ secrets.ID_RSA}} >> ~/.ssh/id_rsa && mv ./public ./www && scp -r ./www ${{ secrets.DO_HOST }}
