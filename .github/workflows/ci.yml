@@ -26,10 +26,11 @@ jobs:
       - name: DeployToDO
         env:
           ID_RSA: ${{ secrets.ID_RSA }}
+          DO_HOST: ${{ secrets.DO_HOST }}
         run: |
           mkdir ~/.ssh
           chmod 700 ~/.ssh
           echo "$ID_RSA" >> ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           mv ./public ./www
-          scp -r ./www ${{ secrets.DO_HOST }}
+          scp -r ./www $DO_HOST
