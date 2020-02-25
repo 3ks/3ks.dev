@@ -1,3 +1,9 @@
+# 0.0.3
+
+使用 [Github Action](https://github.com/features/actions) 实现 CI/CD
+
+push 至 master 分支的代码，自动构建并部署至 [gorda.io](https://gorda.io) 和 [gorda.github.io](https://gorda.github.io)
+
 # 0.0.2
 
 修改主题，布局。
