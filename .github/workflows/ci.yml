@@ -10,11 +10,11 @@ jobs:
       - name: checkout # 步骤的名称
         uses: actions/checkout@master #软件市场的名称
         with: # 参数
-          submodules: true
+          submodules: false
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.4.5
         with:
-          hugo-version: '0.59.1'
+          hugo-version: '0.65.3'
           extended: true
       - name: Build
         run: hugo --minify
