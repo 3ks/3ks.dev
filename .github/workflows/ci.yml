@@ -33,4 +33,4 @@ jobs:
           echo "$ID_RSA" >> ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           mv ./public ./www
-          scp -r ./www $DO_HOST
+          scp -o StrictHostKeyChecking=no -r ./www $DO_HOST
