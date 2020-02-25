@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>在 VMWare 中使用 UEFI 方式安装虚拟机 - Gorda</title>
+<meta property="og:title" content="在 VMWare 中使用 UEFI 方式安装虚拟机 - Gorda">
+
+
+  <link href='https://gorda.github.io/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://static.sguan.top/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="https://static.sguan.top/css/main.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://gorda.github.io/" class="nav-logo">
+    <img src="https://static.sguan.top/images/logo.png"
+         width="50"
+         height="50"
+         alt="Gorda logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/">主页</a></li>
+    
+    <li><a href="/tags/">Tag</a></li>
+    
+    <li><a href="/labs/">实验室</a></li>
+    
+    <li><a href="/about/">关于我</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">预计阅读 1 分钟</span>
+    
+
+    <h1 class="article-title">在 VMWare 中使用 UEFI 方式安装虚拟机</h1>
+
+    
+    <span class="article-date">2020 年 2 月 22 日</span>
+    
+
+    <section class="tags"><a class="tag" href=/tags/vmware/>VMWare</a><a class="tag" href=/tags/uefi/>UEFI</a><a class="tag" href=/tags/gpt/>GPT</a></section>
+
+    <div class="article-content">
+      <h1 id="vmware-设置-uefi-启动">VMWare 设置 UEFI 启动</h1>
+<p><a href="https://www.glbwl.com/vmware-workstation-boot-uefi.html">VMware Workstation虚拟机开启UEFI模式</a></p>
+<h1 id="建立分区表">建立分区表</h1>
+<p>这一步 CentOS 的安装镜像会基于主板的引导方式自动选择。</p>
+<p>Unknown 物理磁盘 -&gt; GPT || MSDOS 分区表</p>
+<p>MSR 引导分区为 /boot，且需要为硬盘第一个分区</p>
+<p>GPT 引导分区为 /boot/efi，同样需要该分区为第一个分区</p>
+<h1 id="性能测试">性能测试</h1>
+<p><a href="https://blog.51cto.com/bilibili/2173243">sysbench 安装</a></p>
+
+    </div>
+  </article>
+
+  
+
+</main>
+
+      <footer class="footer">
+        <div class="footer-img"></div>
+        <div class="footer-inner">
+          <div class="footer-links">
+            <li>Copyright © 2020  <a href="https://github.com/gorda" class="footer-links-kudos">Gorda</a>.</li>
+            <li>由 <a href="https://gohugo.io/" class="footer-links-kudos">Hugo</a> 强力驱动.</li>
+            <li>基于 <a href="https://themes.gohugo.io/hugo-notepadium/" class="footer-links-kudos">Notepadium</a> 和 <a href="https://themes.gohugo.io/hugo-lithium-theme/">Lithium</a> 主题.</li>
+            <li>由 <a href="https://www.qiniu.com/" class="footer-links-kudos">七牛云</a> 提供 CDN 服务.</li>
+          </div>
+          <div class="footer-logos">
+            <a class="footer-logo iconfont icon-git1" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-gmail" href="mailto:imqksl@gmail.com" target="view_window"></a>
+            <a class="footer-logo iconfont icon-docker" href="https://hub.docker.com/u/qksl" target="view_window"></a>
+            <a class="footer-logo iconfont icon-CN_bilibiliB" href="https://space.bilibili.com/23240782" target="view_window"></a>
+            <a class="footer-logo iconfont icon-tubiaozhizuomoban-" href="https://www.youtube.com/channel/UCr_kOyDLQG-9jfZQyS57rGg" target="view_window"></a>
+            <a class="footer-logo iconfont icon-toutiaotiaozhuantupian-" href="https://www.toutiao.com/c/user/3256184007/#mid=1570096565140482" target="view_window"></a>
+            <a class="footer-logo iconfont icon-zhihu" href="https://www.zhihu.com/people/guan-yu-peng-84" target="view_window"></a>
+            <a class="footer-logo iconfont icon-facebook" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-ttww" href="https://twitter.com/tjlO0Tr26F4cMIe" target="view_window"></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

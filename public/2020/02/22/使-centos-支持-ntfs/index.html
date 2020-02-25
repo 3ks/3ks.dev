@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>使 CentOS 支持 NTFS - Gorda</title>
+<meta property="og:title" content="使 CentOS 支持 NTFS - Gorda">
+
+
+  <link href='https://gorda.github.io/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://static.sguan.top/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="https://static.sguan.top/css/main.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://gorda.github.io/" class="nav-logo">
+    <img src="https://static.sguan.top/images/logo.png"
+         width="50"
+         height="50"
+         alt="Gorda logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/">主页</a></li>
+    
+    <li><a href="/tags/">Tag</a></li>
+    
+    <li><a href="/labs/">实验室</a></li>
+    
+    <li><a href="/about/">关于我</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">预计阅读 1 分钟</span>
+    
+
+    <h1 class="article-title">使 CentOS 支持 NTFS</h1>
+
+    
+    <span class="article-date">2020 年 2 月 22 日</span>
+    
+
+    <section class="tags"><a class="tag" href=/tags/centos/>CentOS</a><a class="tag" href=/tags/ntfs/>NTFS</a></section>
+
+    <div class="article-content">
+      <h1 id="使-centos-支持-ntfs">使 CentOS 支持 NTFS</h1>
+<ul>
+<li>下载组件</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
+yum update
+yum install ntfs-3g
+安装完成后，正常挂载即可
+特别注意：如果centos不支持USB3.0请使用2.0的接口，否则会报错！
+</code></pre></div><ul>
+<li>挂载硬盘</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mount -t ntfs-3g  /硬盘路径   /挂载路径
+如：mount -t ntfs-3g /dev/sdc1 /mnt/usb 
+卸载硬盘
+umount  /挂载路径
+如：umount /mnt/usb
+</code></pre></div><ul>
+<li>开机自动挂载(硬盘路径应保持不变)</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#备份配置文件</span>
+cp /etc/fstab  /etc/fatab.bak
+<span style="color:#75715e">#添加配置信息</span>
+vi /etc/fstab
+文件尾添加
+/dev/sdb1  /mnt/usb ntfs-3g  defaults <span style="color:#ae81ff">0</span> 0
+</code></pre></div><p>如果开机自动进入紧急模式(welcome to emergency mode! )，这可能由于找不到自动挂载的硬盘而导致的，可以参考 <a href="https://www.linuxidc.com/Linux/2017-08/146347.htm">这篇文章</a>。</p>
+
+    </div>
+  </article>
+
+  
+
+</main>
+
+      <footer class="footer">
+        <div class="footer-img"></div>
+        <div class="footer-inner">
+          <div class="footer-links">
+            <li>Copyright © 2020  <a href="https://github.com/gorda" class="footer-links-kudos">Gorda</a>.</li>
+            <li>由 <a href="https://gohugo.io/" class="footer-links-kudos">Hugo</a> 强力驱动.</li>
+            <li>基于 <a href="https://themes.gohugo.io/hugo-notepadium/" class="footer-links-kudos">Notepadium</a> 和 <a href="https://themes.gohugo.io/hugo-lithium-theme/">Lithium</a> 主题.</li>
+            <li>由 <a href="https://www.qiniu.com/" class="footer-links-kudos">七牛云</a> 提供 CDN 服务.</li>
+          </div>
+          <div class="footer-logos">
+            <a class="footer-logo iconfont icon-git1" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-gmail" href="mailto:imqksl@gmail.com" target="view_window"></a>
+            <a class="footer-logo iconfont icon-docker" href="https://hub.docker.com/u/qksl" target="view_window"></a>
+            <a class="footer-logo iconfont icon-CN_bilibiliB" href="https://space.bilibili.com/23240782" target="view_window"></a>
+            <a class="footer-logo iconfont icon-tubiaozhizuomoban-" href="https://www.youtube.com/channel/UCr_kOyDLQG-9jfZQyS57rGg" target="view_window"></a>
+            <a class="footer-logo iconfont icon-toutiaotiaozhuantupian-" href="https://www.toutiao.com/c/user/3256184007/#mid=1570096565140482" target="view_window"></a>
+            <a class="footer-logo iconfont icon-zhihu" href="https://www.zhihu.com/people/guan-yu-peng-84" target="view_window"></a>
+            <a class="footer-logo iconfont icon-facebook" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-ttww" href="https://twitter.com/tjlO0Tr26F4cMIe" target="view_window"></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

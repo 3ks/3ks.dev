@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>SSH 免密登陆 - Gorda</title>
+<meta property="og:title" content="SSH 免密登陆 - Gorda">
+
+
+  <link href='https://gorda.github.io/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://static.sguan.top/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="https://static.sguan.top/css/main.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://gorda.github.io/" class="nav-logo">
+    <img src="https://static.sguan.top/images/logo.png"
+         width="50"
+         height="50"
+         alt="Gorda logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/">主页</a></li>
+    
+    <li><a href="/tags/">Tag</a></li>
+    
+    <li><a href="/labs/">实验室</a></li>
+    
+    <li><a href="/about/">关于我</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">预计阅读 2 分钟</span>
+    
+
+    <h1 class="article-title">SSH 免密登陆</h1>
+
+    
+    <span class="article-date">2020 年 2 月 22 日</span>
+    
+
+    <section class="tags"><a class="tag" href=/tags/ssh/>ssh</a><a class="tag" href=/tags/%E5%85%8D%E5%AF%86/>免密</a></section>
+
+    <div class="article-content">
+      <h1 id="ssh-免密登录">SSH 免密登录</h1>
+<ol>
+<li>在服务器上生成用于登录的公钥和私钥</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa
+</code></pre></div><p>首先提示输入生成文件的输出路径，然后是密码，最后是确认密码</p>
+<blockquote>
+<p>密码是用于加密和登录时输入的密码，额，建议为空，不然还叫免密登录吗，但是请确保生成证书的安全，证书泄露可能很危险</p>
+</blockquote>
+<blockquote>
+<p>生产环境强烈建议设置密码，毕竟稳定压倒一切,相当于双重验证吧</p>
+</blockquote>
+<ol start="2">
+<li>导入公钥</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+</code></pre></div><ol start="3">
+<li>配置文件、文件夹的权限</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#如果要开启严格模式，这一步需要正确配置权限</span>
+<span style="color:#75715e">#如果不开启严格模式，可以跳过</span>
+sudo chmod -R <span style="color:#ae81ff">0700</span>  ~/.ssh
+sudo chmod -R <span style="color:#ae81ff">0600</span>  ~/.ssh/authorized_keys
+sudo chown -R guan:guan /home/guan
+</code></pre></div><p>4.如果启用了SELinux，还需要执行（root用户把/home改成/root）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">restorecon -R -v /home
+</code></pre></div><p>5.修改SSH配置文件，支持使用证书登录（root权限）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vim /etc/ssh/sshd_config
+
+<span style="color:#75715e"># 可以去掉注释，也可以直接写在文件末尾？</span>
+
+RSAAuthentication yes  <span style="color:#75715e">#RSA验证方式</span>
+StrictModes yes   <span style="color:#75715e">#严格模式，会检查相关目录的权限,根据自己情况选择</span>
+PubkeyAuthentication yes  <span style="color:#75715e">#允许用户使用自己生成的公私钥</span>
+AuthorizedKeysFile .ssh/authorized_keys  <span style="color:#75715e">#公钥地址</span>
+PasswordAuthentication no <span style="color:#75715e">#是否允许账号密码登录,根据自己情况选择</span>
+</code></pre></div><p>重启 SSH 服务</p>
+<p><code>systemctl restart sshd</code></p>
+<ol start="6">
+<li>客户端获取私钥</li>
+</ol>
+<p>可以直接打开私钥文件然后复制内容到客户端（比如windows）</p>
+<ol start="7">
+<li>使用PuTTY Key Generator 生成适用于 Putty 的证书</li>
+</ol>
+<p><img src="https://cdn.sguan.top/markdown/20181121/k1dWVLBE7vkr.png?imageslim" alt="mark"></p>
+<p>选中私钥文件，然后点击保存为私钥 <code>Save private key</code></p>
+<ol start="8">
+<li>PuTTY 使用证书实现免密登录</li>
+</ol>
+<ul>
+<li>
+<p>打开Putty，加载或者新建一个会话</p>
+</li>
+<li>
+<p>点击 <code>connection</code>-&gt;<code>data</code> , 输入 <code>Auto-login username</code> (自动登录的用户名)</p>
+</li>
+<li>
+<p><code>connection</code>-&gt;<code>ssh</code>-&gt;<code>auth</code> 在<code>Private key file for authentication</code>选择私钥文件</p>
+</li>
+<li>
+<p><code>保存会话</code>，然后直接点击会话即可免密登录</p>
+</li>
+</ul>
+<p><img src="https://cdn.sguan.top/markdown/20181121/dzLoRV3Uzaao.png?imageslim" alt="mark"></p>
+<blockquote>
+<p>服务器存公钥，客户端存私钥</p>
+</blockquote>
+<h1 id="多个服务器共用一个公钥">多个服务器共用一个公钥</h1>
+<blockquote>
+<p>首先一个巨坑，如果直接复制粘贴公钥至另一台服务器，很可能出错，导致服务器拒绝登录</p>
+</blockquote>
+<p>正确的姿势之一是使用有公钥的服务器ssh登录并将公钥传输至另一个服务器，可以避免上面的问题</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh user@host <span style="color:#e6db74">&#39;mkdir -p .ssh &amp;&amp; cat &gt;&gt; .ssh/authorized_keys&#39;</span> &lt; ~/.ssh/id_rsa.pub
+</code></pre></div><p>感谢阮一峰大佬的教程，网上的水文找了一大堆，都没有说到点子上。</p>
+<h1 id="参考链接">参考链接</h1>
+<p><a href="https://my.oschina.net/liting/blog/600098">CentOS 7 SSH使用证书登录</a></p>
+<p><a href="https://blog.51cto.com/callmepeanut/1336864">Putty server refused our key的三种原因和解决方法</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html">SSH原理与运用（一）：远程登录</a></p>
+
+    </div>
+  </article>
+
+  
+
+</main>
+
+      <footer class="footer">
+        <div class="footer-img"></div>
+        <div class="footer-inner">
+          <div class="footer-links">
+            <li>Copyright © 2020  <a href="https://github.com/gorda" class="footer-links-kudos">Gorda</a>.</li>
+            <li>由 <a href="https://gohugo.io/" class="footer-links-kudos">Hugo</a> 强力驱动.</li>
+            <li>基于 <a href="https://themes.gohugo.io/hugo-notepadium/" class="footer-links-kudos">Notepadium</a> 和 <a href="https://themes.gohugo.io/hugo-lithium-theme/">Lithium</a> 主题.</li>
+            <li>由 <a href="https://www.qiniu.com/" class="footer-links-kudos">七牛云</a> 提供 CDN 服务.</li>
+          </div>
+          <div class="footer-logos">
+            <a class="footer-logo iconfont icon-git1" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-gmail" href="mailto:imqksl@gmail.com" target="view_window"></a>
+            <a class="footer-logo iconfont icon-docker" href="https://hub.docker.com/u/qksl" target="view_window"></a>
+            <a class="footer-logo iconfont icon-CN_bilibiliB" href="https://space.bilibili.com/23240782" target="view_window"></a>
+            <a class="footer-logo iconfont icon-tubiaozhizuomoban-" href="https://www.youtube.com/channel/UCr_kOyDLQG-9jfZQyS57rGg" target="view_window"></a>
+            <a class="footer-logo iconfont icon-toutiaotiaozhuantupian-" href="https://www.toutiao.com/c/user/3256184007/#mid=1570096565140482" target="view_window"></a>
+            <a class="footer-logo iconfont icon-zhihu" href="https://www.zhihu.com/people/guan-yu-peng-84" target="view_window"></a>
+            <a class="footer-logo iconfont icon-facebook" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-ttww" href="https://twitter.com/tjlO0Tr26F4cMIe" target="view_window"></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

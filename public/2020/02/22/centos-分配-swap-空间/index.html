@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>CentOS 分配 swap 空间 - Gorda</title>
+<meta property="og:title" content="CentOS 分配 swap 空间 - Gorda">
+
+
+  <link href='https://gorda.github.io/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://static.sguan.top/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="https://static.sguan.top/css/main.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://gorda.github.io/" class="nav-logo">
+    <img src="https://static.sguan.top/images/logo.png"
+         width="50"
+         height="50"
+         alt="Gorda logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/">主页</a></li>
+    
+    <li><a href="/tags/">Tag</a></li>
+    
+    <li><a href="/labs/">实验室</a></li>
+    
+    <li><a href="/about/">关于我</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">预计阅读 1 分钟</span>
+    
+
+    <h1 class="article-title">CentOS 分配 swap 空间</h1>
+
+    
+    <span class="article-date">2020 年 2 月 22 日</span>
+    
+
+    <section class="tags"><a class="tag" href=/tags/centos/>CentOS</a><a class="tag" href=/tags/swap/>swap</a><a class="tag" href=/tags/memory/>memory</a></section>
+
+    <div class="article-content">
+      <h1 id="背景">背景</h1>
+<p>云服务内存不够，也没有自动分配 swap 空间，导致mysql服务器无法启动。</p>
+<p>此时我们可以自己分配 swap 空间作为缓存，感觉 swap 类似于 windows 里的虚拟内存。</p>
+<h1 id="步骤">步骤</h1>
+<ul>
+<li>df -h</li>
+</ul>
+<blockquote>
+<p>获取硬盘设备路径</p>
+</blockquote>
+<ul>
+<li>sudo dd if=/dev/vda1 of=/swapfile count=4096 bs=1MiB</li>
+</ul>
+<blockquote>
+<p>分配空间4G
+官方的 <code>sudo fallocate -l 4G /swapfile</code> 是错误的，评论区出人才！</p>
+</blockquote>
+<ul>
+<li>sudo chmod 600 /swapfile</li>
+</ul>
+<blockquote>
+<p>权限设置</p>
+</blockquote>
+<ul>
+<li>sudo mkswap /swapfile</li>
+</ul>
+<blockquote>
+<p>制作 swap 系统，如果成功会有一个类似下面的提示：</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Setting up swapspace version 1, size <span style="color:#f92672">=</span> <span style="color:#ae81ff">4194300</span> KiB
+no label, UUID<span style="color:#f92672">=</span>b99230bb-21af-47bc-8c37-de41129c39bf
+</code></pre></div><ul>
+<li>sudo swapon /swapfile</li>
+</ul>
+<blockquote>
+<p>启动swap</p>
+</blockquote>
+<ul>
+<li>free -m</li>
+</ul>
+<blockquote>
+<p>可以看到swap是否已经在运行了</p>
+</blockquote>
+<ul>
+<li>sudo vi /etc/sysctl.conf</li>
+</ul>
+<blockquote>
+<p>在文件末尾追加内容</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/swapfile   swap    swap    sw  <span style="color:#ae81ff">0</span>   0
+</code></pre></div><ul>
+<li>保存退出即可。</li>
+</ul>
+<h1 id="参考链接">参考链接</h1>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7">How To Add Swap on CentOS 7</a></p>
+
+    </div>
+  </article>
+
+  
+
+</main>
+
+      <footer class="footer">
+        <div class="footer-img"></div>
+        <div class="footer-inner">
+          <div class="footer-links">
+            <li>Copyright © 2020  <a href="https://github.com/gorda" class="footer-links-kudos">Gorda</a>.</li>
+            <li>由 <a href="https://gohugo.io/" class="footer-links-kudos">Hugo</a> 强力驱动.</li>
+            <li>基于 <a href="https://themes.gohugo.io/hugo-notepadium/" class="footer-links-kudos">Notepadium</a> 和 <a href="https://themes.gohugo.io/hugo-lithium-theme/">Lithium</a> 主题.</li>
+            <li>由 <a href="https://www.qiniu.com/" class="footer-links-kudos">七牛云</a> 提供 CDN 服务.</li>
+          </div>
+          <div class="footer-logos">
+            <a class="footer-logo iconfont icon-git1" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-gmail" href="mailto:imqksl@gmail.com" target="view_window"></a>
+            <a class="footer-logo iconfont icon-docker" href="https://hub.docker.com/u/qksl" target="view_window"></a>
+            <a class="footer-logo iconfont icon-CN_bilibiliB" href="https://space.bilibili.com/23240782" target="view_window"></a>
+            <a class="footer-logo iconfont icon-tubiaozhizuomoban-" href="https://www.youtube.com/channel/UCr_kOyDLQG-9jfZQyS57rGg" target="view_window"></a>
+            <a class="footer-logo iconfont icon-toutiaotiaozhuantupian-" href="https://www.toutiao.com/c/user/3256184007/#mid=1570096565140482" target="view_window"></a>
+            <a class="footer-logo iconfont icon-zhihu" href="https://www.zhihu.com/people/guan-yu-peng-84" target="view_window"></a>
+            <a class="footer-logo iconfont icon-facebook" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-ttww" href="https://twitter.com/tjlO0Tr26F4cMIe" target="view_window"></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

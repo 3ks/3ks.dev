@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>解决 ssh 登陆慢的问题 - Gorda</title>
+<meta property="og:title" content="解决 ssh 登陆慢的问题 - Gorda">
+
+
+  <link href='https://gorda.github.io/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://static.sguan.top/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="https://static.sguan.top/css/main.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://gorda.github.io/" class="nav-logo">
+    <img src="https://static.sguan.top/images/logo.png"
+         width="50"
+         height="50"
+         alt="Gorda logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/">主页</a></li>
+    
+    <li><a href="/tags/">Tag</a></li>
+    
+    <li><a href="/labs/">实验室</a></li>
+    
+    <li><a href="/about/">关于我</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">预计阅读 1 分钟</span>
+    
+
+    <h1 class="article-title">解决 ssh 登陆慢的问题</h1>
+
+    
+    <span class="article-date">2020 年 2 月 22 日</span>
+    
+
+    <section class="tags"><a class="tag" href=/tags/ssh/>ssh</a><a class="tag" href=/tags/slow/>slow</a></section>
+
+    <div class="article-content">
+      <h1 id="背景">背景</h1>
+<p>OpenSSH 在用户登录的时候会验证IP，它根据用户的IP使用反向DNS找到主机名，再使用DNS找到IP地址，最后匹配一下登录的IP是否合法。如果客户机的IP没有域名，或者DNS服务器很慢或不通，会一直等到DNS超时，就会很花时间。（这种情况一般发生在本地没有域名的服务器）</p>
+<blockquote>
+<p>修改 ssh 的配置文件，关闭 DNS 和 GSSAPI 验证即可加快登陆速度</p>
+</blockquote>
+<p>编辑 OpenSSH 的主配置文件</p>
+<ul>
+<li>vi /etc/ssh/sshd_config</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Port<span style="color:#f92672">=</span><span style="color:#ae81ff">22</span>  <span style="color:#75715e">#设置SSH的端口号是22(默认端口号为22)</span>
+Protocol <span style="color:#ae81ff">2</span>  <span style="color:#75715e">#启用SSH版本2协议</span>
+ListenAddress 192.168.0.222  <span style="color:#75715e">#设置服务监听的地址</span>
+DenyUsers   user1 user2 foo  <span style="color:#75715e">#拒绝访问的用户(用空格隔开)</span>
+AllowUsers  root osmond vivek  <span style="color:#75715e">#允许访问的用户(用空格隔开)</span>
+PermitRootLogin  no  <span style="color:#75715e">#禁止root用户登陆</span>
+PermitEmptyPasswords no  <span style="color:#75715e">#用户登陆需要密码认证</span>
+PasswordAuthentication  yes  <span style="color:#75715e">#启用口令认证方式</span>
+</code></pre></div><ul>
+<li>vim /etc/ssh/sshd_config</li>
+</ul>
+<p>修改 79 行左右的 <code>GSSAPIAuthentication</code> 为 <code>no</code></p>
+<p><img src="https://cdn.sguan.top/markdown/20181121/qUFk9LenHzFh.png?imageslim" alt="mark"></p>
+<p>修改 115 行左右的 <code>UseDNS</code> 为 <code>no</code></p>
+<p><img src="https://cdn.sguan.top/markdown/20181121/44XyVT15gM0Q.png?imageslim" alt="mark"></p>
+<ul>
+<li>systemctl restart sshd</li>
+</ul>
+<blockquote>
+<p>重新登录测试</p>
+</blockquote>
+
+    </div>
+  </article>
+
+  
+
+</main>
+
+      <footer class="footer">
+        <div class="footer-img"></div>
+        <div class="footer-inner">
+          <div class="footer-links">
+            <li>Copyright © 2020  <a href="https://github.com/gorda" class="footer-links-kudos">Gorda</a>.</li>
+            <li>由 <a href="https://gohugo.io/" class="footer-links-kudos">Hugo</a> 强力驱动.</li>
+            <li>基于 <a href="https://themes.gohugo.io/hugo-notepadium/" class="footer-links-kudos">Notepadium</a> 和 <a href="https://themes.gohugo.io/hugo-lithium-theme/">Lithium</a> 主题.</li>
+            <li>由 <a href="https://www.qiniu.com/" class="footer-links-kudos">七牛云</a> 提供 CDN 服务.</li>
+          </div>
+          <div class="footer-logos">
+            <a class="footer-logo iconfont icon-git1" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-gmail" href="mailto:imqksl@gmail.com" target="view_window"></a>
+            <a class="footer-logo iconfont icon-docker" href="https://hub.docker.com/u/qksl" target="view_window"></a>
+            <a class="footer-logo iconfont icon-CN_bilibiliB" href="https://space.bilibili.com/23240782" target="view_window"></a>
+            <a class="footer-logo iconfont icon-tubiaozhizuomoban-" href="https://www.youtube.com/channel/UCr_kOyDLQG-9jfZQyS57rGg" target="view_window"></a>
+            <a class="footer-logo iconfont icon-toutiaotiaozhuantupian-" href="https://www.toutiao.com/c/user/3256184007/#mid=1570096565140482" target="view_window"></a>
+            <a class="footer-logo iconfont icon-zhihu" href="https://www.zhihu.com/people/guan-yu-peng-84" target="view_window"></a>
+            <a class="footer-logo iconfont icon-facebook" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-ttww" href="https://twitter.com/tjlO0Tr26F4cMIe" target="view_window"></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+

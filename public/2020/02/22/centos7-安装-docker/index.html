@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.62.2" />
+
+
+<title>CentOS7 安装 Docker - Gorda</title>
+<meta property="og:title" content="CentOS7 安装 Docker - Gorda">
+
+
+  <link href='https://gorda.github.io/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+<link rel="icon" href="https://static.sguan.top/images/favicon.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="https://static.sguan.top/css/main.css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="https://gorda.github.io/" class="nav-logo">
+    <img src="https://static.sguan.top/images/logo.png"
+         width="50"
+         height="50"
+         alt="Gorda logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/">主页</a></li>
+    
+    <li><a href="/tags/">Tag</a></li>
+    
+    <li><a href="/labs/">实验室</a></li>
+    
+    <li><a href="/about/">关于我</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">预计阅读 2 分钟</span>
+    
+
+    <h1 class="article-title">CentOS7 安装 Docker</h1>
+
+    
+    <span class="article-date">2020 年 2 月 22 日</span>
+    
+
+    <section class="tags"><a class="tag" href=/tags/docker/>Docker</a><a class="tag" href=/tags/install/>install</a></section>
+
+    <div class="article-content">
+      <h1 id="centos7-安装-docker">CentOS7 安装 Docker</h1>
+<h3 id="使用-yum-安装">使用 yum 安装</h3>
+<blockquote>
+<p>安装一些必要的系统工具</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+</code></pre></div><blockquote>
+<p>添加软件源信息</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+
+<span style="color:#75715e">#如果是国外的服务器，直接添加docker官方软件源</span>
+
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre></div><blockquote>
+<p>更新 yum 缓存</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum makecache fast
+</code></pre></div><blockquote>
+<p>安装 Docker-ce</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum -y install docker-ce
+</code></pre></div><blockquote>
+<p>启动 Docker 后台服务</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl start docker
+</code></pre></div><blockquote>
+<p>开机启动 Docker 后台服务</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl enable docker
+</code></pre></div><blockquote>
+<p>将非root用户添加至docker组</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">非root用户在使用docker时，可能需要经常sudo，
+将该用户添加至docker用户组可以解决这个麻烦
+执行完后重启docker，重新登陆ssh即可生效
+
+sudo usermod -aG docker username
+</code></pre></div><blockquote>
+<p>测试运行 hello-world</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker run hello-world
+</code></pre></div><p>下图表示 Docker 已成功安装并运行</p>
+<p><img src="https://cdn.sguan.top/markdown/20181121/G02nYdGVa70I.png?imageslim" alt="mark"></p>
+<h3 id="镜像加速">镜像加速</h3>
+<blockquote>
+<p>如果由于没有掌握科学上网方式等原因导致拉取 Docker 镜像十分缓慢，可以配置 Docker 镜像来加速</p>
+</blockquote>
+<p>vim /etc/docker/daemon.json</p>
+<ul>
+<li>官方镜像</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{</span>
+  <span style="color:#e6db74">&#34;registry-mirrors&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;https://registry.docker-cn.com&#34;</span><span style="color:#f92672">]</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>163镜像</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{</span>
+  <span style="color:#e6db74">&#34;registry-mirrors&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;http://hub-mirror.c.163.com&#34;</span><span style="color:#f92672">]</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>阿里云镜像</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{</span>
+  <span style="color:#e6db74">&#34;registry-mirrors&#34;</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;https://almtd3fa.mirror.aliyuncs.com&#34;</span><span style="color:#f92672">]</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>重新加载配置文件并重启 Docker 服务</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl daemon-reload
+systemctl restart docker
+</code></pre></div><h3 id="删除-docker-ce">删除 Docker CE</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo yum remove docker-ce
+sudo rm -rf /var/lib/docker
+</code></pre></div><h1 id="docker-无法启动或使用">Docker 无法启动或使用</h1>
+<blockquote>
+<p>安装完 docker 后使用出现下图的提示</p>
+</blockquote>
+<p><img src="https://cdn.sguan.top/markdown/20181126/f5HU3ewRRcLd.png?imageslim" alt="mark"></p>
+<p>大意就是权限不够，可以使用 <code>root 账号</code> 运行 docker 或者将当前用户加入到 <code>docker 用户组</code>即可。</p>
+<blockquote>
+<p>将当前用户加入至 <code>docker 用户组</code></p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo gpasswd -a $USER docker    <span style="color:#75715e">#将当前用户添加至 docker用户组</span>
+newgrp docker     <span style="color:#75715e"># 更新用户组</span>
+docker ps     <span style="color:#75715e"># 测试</span>
+</code></pre></div><h1 id="配置别名快捷键">配置别名（快捷键）</h1>
+<ul>
+<li>vim  <code>/etc/bashrc</code></li>
+</ul>
+<p>内容如下，这取决于个人习惯</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">alias dk<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker&#39;</span>;
+alias dc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker container&#39;</span>;
+alias db<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker build&#39;</span>;
+alias di<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker image&#39;</span>;
+alias ds<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker images&#39;</span>;
+alias dp<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;docker-compose&#39;</span>;
+</code></pre></div><ul>
+<li>保存退出后，<code>source /etc/bashrc</code> 使配置生效</li>
+</ul>
+<h1 id="docker-compose-安装">Docker-compose 安装</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo curl -L <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://github.com/docker/compose/releases/download/1.23.2/docker-compose-</span><span style="color:#66d9ef">$(</span>uname -s<span style="color:#66d9ef">)</span><span style="color:#e6db74">-</span><span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> -o /usr/local/bin/docker-compose <span style="color:#f92672">&amp;&amp;</span>  chmod +x /usr/local/bin/docker-compose
+</code></pre></div><h1 id="参考链接">参考链接</h1>
+<p><a href="http://www.runoob.com/docker/centos-docker-install.html">CentOS Docker安装</a></p>
+<p><a href="https://yeasy.gitbooks.io/docker_practice/compose/install.html">Docker-compose 安装</a></p>
+<p><a href="https://www.jianshu.com/p/2217cfed29d7">Docker Compose 配置文件详解</a></p>
+<p><a href="https://blog.csdn.net/pushiqiang/article/details/78714628">Dockerfile教程</a></p>
+<p><a href="https://www.cnblogs.com/informatics/p/8276172.html">Docker启动Get Permission Denied</a></p>
+
+    </div>
+  </article>
+
+  
+
+</main>
+
+      <footer class="footer">
+        <div class="footer-img"></div>
+        <div class="footer-inner">
+          <div class="footer-links">
+            <li>Copyright © 2020  <a href="https://github.com/gorda" class="footer-links-kudos">Gorda</a>.</li>
+            <li>由 <a href="https://gohugo.io/" class="footer-links-kudos">Hugo</a> 强力驱动.</li>
+            <li>基于 <a href="https://themes.gohugo.io/hugo-notepadium/" class="footer-links-kudos">Notepadium</a> 和 <a href="https://themes.gohugo.io/hugo-lithium-theme/">Lithium</a> 主题.</li>
+            <li>由 <a href="https://www.qiniu.com/" class="footer-links-kudos">七牛云</a> 提供 CDN 服务.</li>
+          </div>
+          <div class="footer-logos">
+            <a class="footer-logo iconfont icon-git1" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-gmail" href="mailto:imqksl@gmail.com" target="view_window"></a>
+            <a class="footer-logo iconfont icon-docker" href="https://hub.docker.com/u/qksl" target="view_window"></a>
+            <a class="footer-logo iconfont icon-CN_bilibiliB" href="https://space.bilibili.com/23240782" target="view_window"></a>
+            <a class="footer-logo iconfont icon-tubiaozhizuomoban-" href="https://www.youtube.com/channel/UCr_kOyDLQG-9jfZQyS57rGg" target="view_window"></a>
+            <a class="footer-logo iconfont icon-toutiaotiaozhuantupian-" href="https://www.toutiao.com/c/user/3256184007/#mid=1570096565140482" target="view_window"></a>
+            <a class="footer-logo iconfont icon-zhihu" href="https://www.zhihu.com/people/guan-yu-peng-84" target="view_window"></a>
+            <a class="footer-logo iconfont icon-facebook" href="https://github.com/gorda" target="view_window"></a>
+            <a class="footer-logo iconfont icon-ttww" href="https://twitter.com/tjlO0Tr26F4cMIe" target="view_window"></a>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
+
