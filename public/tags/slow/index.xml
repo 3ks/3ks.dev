@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>slow on Gorda</title>
+    <link>https://gorda.github.io/tags/slow/</link>
+    <description>Recent content in slow on Gorda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 22 Feb 2020 16:50:37 +0800</lastBuildDate>
+    
+	<atom:link href="https://gorda.github.io/tags/slow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>解决 ssh 登陆慢的问题</title>
+      <link>https://gorda.github.io/2020/02/22/%E8%A7%A3%E5%86%B3-ssh-%E7%99%BB%E9%99%86%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 22 Feb 2020 16:50:37 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/%E8%A7%A3%E5%86%B3-ssh-%E7%99%BB%E9%99%86%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>背景 OpenSSH 在用户登录的时候会验证IP，它根据用户的IP使用反向DNS找到主机名，再使用DNS找到IP地址，最后匹配一下登录的IP是否合法。如果客</description>
+    </item>
+    
+  </channel>
+</rss>

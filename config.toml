@@ -1,5 +1,6 @@
-baseurl = "https://example.org"
+#baseurl = "https://example.org"
 #baseurl = "https://gorda.io/"
+baseurl = "https://gorda.github.io/"
 title = "Gorda"
 
 theme = "less"

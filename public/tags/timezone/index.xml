@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>timezone on Gorda</title>
+    <link>https://gorda.github.io/tags/timezone/</link>
+    <description>Recent content in timezone on Gorda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 22 Feb 2020 16:42:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://gorda.github.io/tags/timezone/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS 修改时区</title>
+      <link>https://gorda.github.io/2020/02/22/centos-%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/</link>
+      <pubDate>Sat, 22 Feb 2020 16:42:00 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/centos-%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/</guid>
+      <description>修改时区 如果需要修改时区，CentOS7 中引入了一个 timedatectl 工具，直接运行命令： timedatectl set-timezone Asia/Shanghai 也可以手动修改时区文件 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 如果设置时区后，时间依然快了8小</description>
+    </item>
+    
+  </channel>
+</rss>

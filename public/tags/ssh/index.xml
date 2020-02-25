@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh on Gorda</title>
+    <link>https://gorda.github.io/tags/ssh/</link>
+    <description>Recent content in ssh on Gorda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 22 Feb 2020 16:57:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://gorda.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>修复 Putty 乱码的问题</title>
+      <link>https://gorda.github.io/2020/02/22/%E4%BF%AE%E5%A4%8D-putty-%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 22 Feb 2020 16:57:03 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/%E4%BF%AE%E5%A4%8D-putty-%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>修复 Putty 乱码的问题 该问题是 putty 配置不正确导致的 回退，方向键等乱码问题，按下图箭头所指设置即可 小键盘等乱码问题，按下图设置箭头所指设置即可 设置完记</description>
+    </item>
+    
+    <item>
+      <title>SSH 免密登陆</title>
+      <link>https://gorda.github.io/2020/02/22/ssh-%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</link>
+      <pubDate>Sat, 22 Feb 2020 16:52:25 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/ssh-%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</guid>
+      <description>SSH 免密登录 在服务器上生成用于登录的公钥和私钥 ssh-keygen -t rsa 首先提示输入生成文件的输出路径，然后是密码，最后是确认密码 密码是用于加密和登录时输入的密码</description>
+    </item>
+    
+    <item>
+      <title>解决 ssh 登陆慢的问题</title>
+      <link>https://gorda.github.io/2020/02/22/%E8%A7%A3%E5%86%B3-ssh-%E7%99%BB%E9%99%86%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 22 Feb 2020 16:50:37 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/%E8%A7%A3%E5%86%B3-ssh-%E7%99%BB%E9%99%86%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+      <description>背景 OpenSSH 在用户登录的时候会验证IP，它根据用户的IP使用反向DNS找到主机名，再使用DNS找到IP地址，最后匹配一下登录的IP是否合法。如果客</description>
+    </item>
+    
+  </channel>
+</rss>

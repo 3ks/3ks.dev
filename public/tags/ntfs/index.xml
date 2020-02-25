@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NTFS on Gorda</title>
+    <link>https://gorda.github.io/tags/ntfs/</link>
+    <description>Recent content in NTFS on Gorda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 22 Feb 2020 17:00:13 +0800</lastBuildDate>
+    
+	<atom:link href="https://gorda.github.io/tags/ntfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使 CentOS 支持 NTFS</title>
+      <link>https://gorda.github.io/2020/02/22/%E4%BD%BF-centos-%E6%94%AF%E6%8C%81-ntfs/</link>
+      <pubDate>Sat, 22 Feb 2020 17:00:13 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/%E4%BD%BF-centos-%E6%94%AF%E6%8C%81-ntfs/</guid>
+      <description>使 CentOS 支持 NTFS 下载组件 wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo yum update yum install ntfs-3g 安装完成后，正常挂载即可 特别注意：如果centos不支持USB3.0请使用2.0的接口，否则会报错！ 挂载</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CentOS on Gorda</title>
+    <link>https://gorda.github.io/tags/centos/</link>
+    <description>Recent content in CentOS on Gorda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 22 Feb 2020 17:00:13 +0800</lastBuildDate>
+    
+	<atom:link href="https://gorda.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使 CentOS 支持 NTFS</title>
+      <link>https://gorda.github.io/2020/02/22/%E4%BD%BF-centos-%E6%94%AF%E6%8C%81-ntfs/</link>
+      <pubDate>Sat, 22 Feb 2020 17:00:13 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/%E4%BD%BF-centos-%E6%94%AF%E6%8C%81-ntfs/</guid>
+      <description>使 CentOS 支持 NTFS 下载组件 wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo yum update yum install ntfs-3g 安装完成后，正常挂载即可 特别注意：如果centos不支持USB3.0请使用2.0的接口，否则会报错！ 挂载</description>
+    </item>
+    
+    <item>
+      <title>配置 yum 源</title>
+      <link>https://gorda.github.io/2020/02/22/%E9%85%8D%E7%BD%AE-yum-%E6%BA%90/</link>
+      <pubDate>Sat, 22 Feb 2020 16:45:34 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/%E9%85%8D%E7%BD%AE-yum-%E6%BA%90/</guid>
+      <description>背景 由于总所周知的原因，国内网速较慢，访问国外资源可以选择 科学上网 或者 国内镜像 步骤 备份当前 yum 源 sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak 设置阿里云 yum 源 sudo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo 添加EPEL源</description>
+    </item>
+    
+    <item>
+      <title>CentOS 修改时区</title>
+      <link>https://gorda.github.io/2020/02/22/centos-%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/</link>
+      <pubDate>Sat, 22 Feb 2020 16:42:00 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/centos-%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/</guid>
+      <description>修改时区 如果需要修改时区，CentOS7 中引入了一个 timedatectl 工具，直接运行命令： timedatectl set-timezone Asia/Shanghai 也可以手动修改时区文件 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 如果设置时区后，时间依然快了8小</description>
+    </item>
+    
+    <item>
+      <title>CentOS 修改主机名</title>
+      <link>https://gorda.github.io/2020/02/22/centos-%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/</link>
+      <pubDate>Sat, 22 Feb 2020 16:38:05 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/centos-%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/</guid>
+      <description>修改主机名 直接编辑 /etc/hostname 文件即可修改主机名。 修改并立即生效 但是，上面的方法需要重启计算机才能使修改生效。 通过命令 hostnamectl 修改主机名可以立即生效。 hostnamectl set-hostname your-hostname</description>
+    </item>
+    
+    <item>
+      <title>CentOS 防火墙配置</title>
+      <link>https://gorda.github.io/2020/02/22/centos-%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sat, 22 Feb 2020 16:35:25 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/centos-%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/</guid>
+      <description>开放端口 开放8080端口 firewall-cmd &amp;ndash;zone=public &amp;ndash;add-port=8080/tcp &amp;ndash;permanent &amp;ndash;permanent永久生效，没有此参数重启后失效 重新载入防火墙策略 firewall-cmd &amp;ndash;reload 查看开放端口情况 firewall-cmd &amp;ndash;permanent &amp;ndash;zone=public &amp;ndash;list-ports</description>
+    </item>
+    
+    <item>
+      <title>CentOS 网卡初始化</title>
+      <link>https://gorda.github.io/2020/02/22/centos-%E7%BD%91%E5%8D%A1%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
+      <pubDate>Sat, 22 Feb 2020 16:19:32 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/centos-%E7%BD%91%E5%8D%A1%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
+      <description>启用 etho0 CentOS 在刚刚装装好的时候 可能 存在没有启用网卡的情况，这个时候我们需要手动添加一个网卡,步骤如下： cd /etc/sysconfig/network-scripts/ cp ifcfg-ens33 ens33_bak mv ifcfg-ens33 ifcfg-eth0 vi ifcfg-eth0 修改name=eth0</description>
+    </item>
+    
+    <item>
+      <title>CentOS 分配 swap 空间</title>
+      <link>https://gorda.github.io/2020/02/22/centos-%E5%88%86%E9%85%8D-swap-%E7%A9%BA%E9%97%B4/</link>
+      <pubDate>Sat, 22 Feb 2020 15:54:45 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/centos-%E5%88%86%E9%85%8D-swap-%E7%A9%BA%E9%97%B4/</guid>
+      <description>背景 云服务内存不够，也没有自动分配 swap 空间，导致mysql服务器无法启动。 此时我们可以自己分配 swap 空间作为缓存，感觉 swap 类似于 windows 里的虚拟内存。 步骤</description>
+    </item>
+    
+  </channel>
+</rss>

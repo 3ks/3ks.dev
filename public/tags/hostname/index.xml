@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hostname on Gorda</title>
+    <link>https://gorda.github.io/tags/hostname/</link>
+    <description>Recent content in hostname on Gorda</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 22 Feb 2020 16:38:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://gorda.github.io/tags/hostname/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CentOS 修改主机名</title>
+      <link>https://gorda.github.io/2020/02/22/centos-%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/</link>
+      <pubDate>Sat, 22 Feb 2020 16:38:05 +0800</pubDate>
+      
+      <guid>https://gorda.github.io/2020/02/22/centos-%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/</guid>
+      <description>修改主机名 直接编辑 /etc/hostname 文件即可修改主机名。 修改并立即生效 但是，上面的方法需要重启计算机才能使修改生效。 通过命令 hostnamectl 修改主机名可以立即生效。 hostnamectl set-hostname your-hostname</description>
+    </item>
+    
+  </channel>
+</rss>

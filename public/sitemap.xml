@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/centos7-%E5%AE%89%E8%A3%85-docker/</loc>
+    <lastmod>2020-02-22T17:16:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/docker/</loc>
+    <lastmod>2020-02-22T17:16:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/</loc>
+    <lastmod>2020-02-22T17:16:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/install/</loc>
+    <lastmod>2020-02-22T17:16:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/post/</loc>
+    <lastmod>2020-02-22T17:16:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/</loc>
+    <lastmod>2020-02-22T17:16:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/port/</loc>
+    <lastmod>2020-02-22T17:08:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/windows/</loc>
+    <lastmod>2020-02-22T17:08:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/windows-%E4%B8%8B%E6%9F%90%E4%B8%AA%E7%AB%AF%E5%8F%A3%E5%B7%B2%E8%A2%AB%E5%8D%A0%E7%94%A8%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2020-02-22T17:08:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/gpt/</loc>
+    <lastmod>2020-02-22T17:05:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/uefi/</loc>
+    <lastmod>2020-02-22T17:05:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/vmware/</loc>
+    <lastmod>2020-02-22T17:05:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/%E5%9C%A8-vmware-%E4%B8%AD%E4%BD%BF%E7%94%A8-uefi-%E6%96%B9%E5%BC%8F%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <lastmod>2020-02-22T17:05:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/centos/</loc>
+    <lastmod>2020-02-22T17:00:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/ntfs/</loc>
+    <lastmod>2020-02-22T17:00:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/%E4%BD%BF-centos-%E6%94%AF%E6%8C%81-ntfs/</loc>
+    <lastmod>2020-02-22T17:00:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/alias/</loc>
+    <lastmod>2020-02-22T16:58:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/linux/</loc>
+    <lastmod>2020-02-22T16:58:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/linux-%E5%91%BD%E4%BB%A4%E5%88%AB%E5%90%8D/</loc>
+    <lastmod>2020-02-22T16:58:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/putty/</loc>
+    <lastmod>2020-02-22T16:57:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/ssh/</loc>
+    <lastmod>2020-02-22T16:57:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/%E4%B9%B1%E7%A0%81/</loc>
+    <lastmod>2020-02-22T16:57:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/%E4%BF%AE%E5%A4%8D-putty-%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2020-02-22T16:57:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/ssh-%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</loc>
+    <lastmod>2020-02-22T16:52:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/%E5%85%8D%E5%AF%86/</loc>
+    <lastmod>2020-02-22T16:52:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/slow/</loc>
+    <lastmod>2020-02-22T16:50:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/%E8%A7%A3%E5%86%B3-ssh-%E7%99%BB%E9%99%86%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2020-02-22T16:50:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/yum/</loc>
+    <lastmod>2020-02-22T16:45:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/%E9%85%8D%E7%BD%AE-yum-%E6%BA%90/</loc>
+    <lastmod>2020-02-22T16:45:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/centos-%E4%BF%AE%E6%94%B9%E6%97%B6%E5%8C%BA/</loc>
+    <lastmod>2020-02-22T16:42:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/timezone/</loc>
+    <lastmod>2020-02-22T16:42:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/centos-%E4%BF%AE%E6%94%B9%E4%B8%BB%E6%9C%BA%E5%90%8D/</loc>
+    <lastmod>2020-02-22T16:38:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/hostname/</loc>
+    <lastmod>2020-02-22T16:38:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/centos-%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2020-02-22T16:35:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/firewall/</loc>
+    <lastmod>2020-02-22T16:35:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/centos-%E7%BD%91%E5%8D%A1%E5%88%9D%E5%A7%8B%E5%8C%96/</loc>
+    <lastmod>2020-02-22T16:19:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/ip/</loc>
+    <lastmod>2020-02-22T16:19:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/network/</loc>
+    <lastmod>2020-02-22T16:19:32+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/cache/</loc>
+    <lastmod>2020-02-22T16:03:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/linux-%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98/</loc>
+    <lastmod>2020-02-22T16:03:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/22/centos-%E5%88%86%E9%85%8D-swap-%E7%A9%BA%E9%97%B4/</loc>
+    <lastmod>2020-02-22T15:54:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/memory/</loc>
+    <lastmod>2020-02-22T15:54:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/swap/</loc>
+    <lastmod>2020-02-22T15:54:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/2020/02/18/hello-world/</loc>
+    <lastmod>2020-02-18T17:50:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/tags/none/</loc>
+    <lastmod>2020-02-18T17:50:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/labs/</loc>
+    <lastmod>2020-02-18T17:45:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/page/</loc>
+    <lastmod>2020-02-18T17:45:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gorda.github.io/about/</loc>
+    <lastmod>2020-02-18T17:44:54+08:00</lastmod>
+  </url>
+  
+</urlset>
