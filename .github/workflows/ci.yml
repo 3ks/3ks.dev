@@ -24,4 +24,6 @@ jobs:
           publish_branch: master
           publish_dir: ./public
       - name: DeployToDO
-        run: mkdir ~/.ssh && echo "${{ secrets.ID_RSA }}" >> ~/.ssh/id_rsa && mv ./public ./www && scp -r ./www ${{ secrets.DO_HOST }}
+        env:
+          ID_RSA: ${{ secrets.ID_RSA }}
+        run: mkdir ~/.ssh && echo "$ID_RSA" >> ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa && mv ./public ./www && scp -r ./www ${{ secrets.DO_HOST }}
