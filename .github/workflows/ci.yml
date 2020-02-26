@@ -9,21 +9,28 @@ jobs:
     steps:
       - name: CheckOut
         uses: actions/checkout@v2
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.4.5
         with:
           hugo-version: '0.65.3'
           extended: true
-      - name: Build
-        run: hugo --minify
-      - name: Deploy
+
+      - name: Build for github.io
+        run: hugo --minify --baseURL https://gorda.github.io/
+
+      - name: Deploy to github.io
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           external_repository: gorda/gorda.github.io
           publish_branch: master
           publish_dir: ./public
-      - name: DeployToDO
+
+      - name: Build for gorda.io
+        run: hugo --minify --baseURL https://gorda.io/
+
+      - name: Deploy to gorda.io
         env:
           ID_RSA: ${{ secrets.ID_RSA }}
           DO_HOST: ${{ secrets.DO_HOST }}
