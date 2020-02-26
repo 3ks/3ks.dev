@@ -21,3 +21,21 @@ git log --format='%aN' | sort -u | while read name; do echo -en "$name\t"; git l
 ```bash
 find . "(" -name "*.go" ")" -print | xargs wc -l
 ```
+
+# 批量删除分支
+
+删除当前分支外的所有分支：
+
+```bash
+git branch | xargs git branch -d
+```
+
+删除分支名包含指定字符的分支（当然，当前分支还是例外）：
+
+```bash
+git branch | grep ‘zh-trans-*’ | xargs git branch -d
+```
+
+# 参考链接
+
+[Git批量删除本地分支](https://blog.csdn.net/u012719153/article/details/81136081)
