@@ -1,5 +1,5 @@
 ---
-title: "CentOS 分配 swap 空间"
+title: "CentOS 分配和禁用 swap 空间"
 date: 2020-02-22T15:54:45+08:00
 tags: ["CentOS","swap","memory"]
 
@@ -53,6 +53,40 @@ no label, UUID=b99230bb-21af-47bc-8c37-de41129c39bf
 
 - 保存退出即可。
 
+# 禁用系统默认的 swap 分区
+
+1. 查看当前挂载 swap 的路径
+
+vim /etc/fstab
+ 
+```bash
+# /etc/fstab
+# Created by anaconda on Sat Feb 29 05:30:30 2020
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+/dev/mapper/centos-root /                       xfs     defaults        0 0
+UUID=666d6259-55da-4501-91fb-40b2c0b16ca2 /boot                   xfs     defaults        0 0
+/dev/mapper/centos-swap swap                    swap    defaults        0 0
+```
+
+swap 文件系统那一行对应的路径就是目前挂载的 swap 分区。
+
+我们将这一行删掉，或者注释掉，然后 wq 保存退出。
+
+这样下次系统启动时就不会自动挂载该 swap 分区。
+
+不想重启系统的同学记住刚刚 swap 分区的路径，执行下面的命令即可立即禁用 swap 分区。
+
+```bash
+swapoff /dev/mapper/centos-swap
+```
+
+todo: 分区释放 
+
 # 参考链接
 
 [How To Add Swap on CentOS 7](https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7)
+
+[CentOS 7 关闭 swap 分区](https://blog.csdn.net/dejunyang/article/details/97972399)
