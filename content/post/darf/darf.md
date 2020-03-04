@@ -6,6 +6,10 @@ draft: true
 
 ---
 
+# 网页指定 favicon
+
+[设置favicon的几种方式](https://blog.csdn.net/YLXB2/article/details/53336962)
+
 # 服务器加速
 
 建站 TCPA
