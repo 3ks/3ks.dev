@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: Arial, 'Times New Roman', 'Microsoft YaHei',"Microsoft YaHei UI", SimHei, serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
