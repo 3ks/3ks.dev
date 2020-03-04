@@ -11,7 +11,8 @@
 <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
 {{ end }}
 {{ with .Site.Params.favicon }}
-  <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>
+{{/*  <link href='{{ . | absURL }}' rel='icon' type='image/x-icon'/>*/}}
+  <link href='{{ .Site.Params.static }}images/{{ .Site.Params.icon.url }}' rel='icon' type='image/x-icon'/>
 {{ end }}
 
 {{ if .IsHome }}
@@ -30,7 +31,7 @@
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-<link rel="icon" href="{{ .Site.Params.static }}images/{{ .Site.Params.icon.url }}" type="image/x-icon"/>
+{{/*<link rel="icon" href="{{ .Site.Params.static }}images/{{ .Site.Params.icon.url }}" type="image/x-icon"/>*/}}
 <link rel="stylesheet" href="{{ .Site.Params.static }}css/main.css" media="all">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400|Lato:400,400italic,700">
 
