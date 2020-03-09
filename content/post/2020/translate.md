@@ -186,3 +186,23 @@ Once you have an Operator deployed, you'd use it by adding, modifying or deletin
 ~~可以了！Operator 会负责应用更改并保持该 service 的良好状态。~~
 
 可以了！Operator 会负责应用所作的更改并保持现有服务处于良好的状态。
+
+# 19547
+
+feedback by [tengqm](https://github.com/tengqm) of [kuberntes](https://github.com/kubernetes) in [pr#19547](https://github.com/kubernetes/website/pull/19547)
+
+### 1 
+
+This page shows how to enable and use the `RunAsUserName` feature for pods and containers that will run on Windows nodes. This feature is meant to be the Windows equivalent of the Linux-specific `runAsUser` feature, allowing users to run the container entrypoints with a different username that their default ones.
+
+~~本页显示将展示如何为运行在 Windows 节点上的 pod 和容器启用并使用 `RunAsUserName` 功能。此功能旨在成为 Windows 版的 `runAsUser`（Linux），此功能允许用户使用与默认用户名不同的用户名运行容器 entrypoint。~~
+
+本页展示如何为运行在 Windows 节点上的 pod 和容器启用并使用 `RunAsUserName` 功能。此功能旨在成为 Windows 版的 `runAsUser`（Linux），允许用户使用与默认用户名不同的用户名运行容器 entrypoint。
+
+### 2
+
+Additionally, there are some restrictions regarding the `DOMAIN` and `USER`:
+
+~~此外，这儿还有一些关于 `DOMAIN` 和 `USER` 的限制：~~
+
+此外，关于 `DOMAIN` 和 `USER` 还有一些限制：
