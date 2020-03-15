@@ -31,6 +31,21 @@ Cloud-init 用于创建虚拟机实例完成初始化操作，功能不仅限于
 配置
 克隆
 
+# 注意事项
+
+### 执行次数
+
+cloud-init 的配置不是仅执行一次，而是每次开机都会执行。如果你只需让其完成一些初始化任务，可以在虚拟机首次启动后，将 cloud-init 关闭。或者直接修改 cloud-init 的配置。否则会出现手动修改一些配置，重启后总是会被重置的情况。
+
+### 配置 root 的密码 
+
+在 proxmox 中 root 配置默认密码，会导致密码被修改为不知道是什么（bug？）。
+解决方法是用另一个管理员用户重置 root 密码，并删除 cloud-init 配置 root 密码的相关部分。
+
+### 配置 hostname
+
+在 proxmox 的 cloud-init 中，`proxmox -> 选项 -> 名称` 会作为虚拟机的 hostname
+
 # 参考链接
 
 [proxmox里使用cloud-init和一些笔记](https://zhangguanzhang.github.io/2019/01/22/proxmox-cloud-init/#%E5%AE%89%E8%A3%85%E5%AE%8Cproxmox%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE)
