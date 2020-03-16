@@ -48,6 +48,8 @@ cloud-init 的配置不是仅执行一次，而是每次开机都会执行。如
 
 # 参考链接
 
+[Correct Installation and Configuration of pip2 and pip3](https://www.gungorbudak.com/blog/2018/08/02/correct-installation-and-configuration-of-pip2-and-pip3/)
+
 [proxmox里使用cloud-init和一些笔记](https://zhangguanzhang.github.io/2019/01/22/proxmox-cloud-init/#%E5%AE%89%E8%A3%85%E5%AE%8Cproxmox%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE)
 
 [Proxmox使用Cloud-Init制作Debian10系统模板](https://lala.im/6157.html)
