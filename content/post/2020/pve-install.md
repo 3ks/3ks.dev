@@ -21,6 +21,16 @@ grep -P "!== 'Active'" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.j
 
 在安装时有可以通过 GUI 设置 IP，后续想在修改的话，可以参考 [proxmox 完美更改 IP](https://blog.csdn.net/seaship/article/details/88919421)
 
+# 启用 BBR
+
+pve 6.x 的内核版本足够高，不需要安装内核，可以通过一键脚本直接启动 BBR
+
+```bash
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+```
+
+> 直接输入 4 启用 BBR 即可。
+
 # 注意事项
 
 web 管理界面 `必须通过 https 的方式访问`
@@ -33,3 +43,4 @@ web 管理界面 `必须通过 https 的方式访问`
 
 [proxmox 完美更改 IP](https://blog.csdn.net/seaship/article/details/88919421)
 
+[BBR+BBR魔改+Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu](https://www.moerats.com/archives/387/)
