@@ -39,12 +39,22 @@ cloud-init 的配置不是仅执行一次，而是每次开机都会执行。如
 
 ### 配置 root 的密码 
 
-在 proxmox 中 root 配置默认密码，会导致密码被修改为不知道是什么（bug？）。
+在 proxmox 中 root 配置默认密码，会导致密码被修改为不知道是什么（bug？或者我姿势不对）。
 解决方法是用另一个管理员用户重置 root 密码，并删除 cloud-init 配置 root 密码的相关部分。
+
+### 安装 cloud-init
+
+```bash
+yum -y install cloud-init
+```
 
 ### 配置 hostname
 
 在 proxmox 的 cloud-init 中，`proxmox -> 选项 -> 名称` 会作为虚拟机的 hostname
+
+### 配置项
+
+刚刚了解 cloud-init，本人仅用其进行 ip hostname 等设置，其它的大量的配置项我个人更喜欢在制作 `模板` 时全部准备好。
 
 # 参考链接
 
