@@ -35,7 +35,20 @@ sudo yum makecache fast
 > 安装 Docker-ce
 
 ```bash
-sudo yum -y install docker-ce
+sudo yum install docker-ce docker-ce-cli containerd.io
+```
+
+上面的安装方式默认会按照最新版本的 Docker，而最新的 docker 可能会存在一些兼容性问题，那么我们可以指定安装的版本
+
+```bash
+# 搜索可用版本
+$ yum list docker-ce --showduplicates | sort -r
+
+# 输出结果主要有 3 列，中间一列表示版本号，选择要安装的版本，输入命令：
+$ sudo yum install docker-ce-版本号 docker-ce-cli-版本号 containerd.io
+ 
+# 其中版本号只取 xx.yy.zz 三段式的数字部分，例如：
+$ yum -y install docer-ce-18.09.1 docker-ce-cli-18.09.1 containerd.io
 ```
 
 > 启动 Docker 后台服务
@@ -156,6 +169,8 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-
 ```
 
 # 参考链接
+
+[Get Docker Engine](https://docs.docker.com/install/linux/docker-ce/centos/)
 
 [CentOS Docker安装](http://www.runoob.com/docker/centos-docker-install.html)
 
