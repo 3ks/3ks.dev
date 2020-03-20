@@ -44,3 +44,5 @@ web 管理界面 `必须通过 https 的方式访问`
 [proxmox 完美更改 IP](https://blog.csdn.net/seaship/article/details/88919421)
 
 [BBR+BBR魔改+Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu](https://www.moerats.com/archives/387/)
+
+[一键安装最新内核并开启 BBR 脚本](https://teddysun.com/489.html)
