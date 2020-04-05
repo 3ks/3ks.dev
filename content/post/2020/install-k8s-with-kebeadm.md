@@ -19,12 +19,13 @@ draft: true
 k8s 对于环境有一些要求，虽然可以通过参数解决跳过限制，但最好依照官方的要求修改系统配置。这里只列出我配置过的地方，如果你在安装过程中出现其它错误，可以参考官方文档获取完整配置要求 [Installing kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 
 ## 2.1 网络配置
-- 节点网络使用 172.16.1.0/16
-- 容器网络使用 10.244.0.0/16
+
+- 节点网络使用 172.16.0.0/16
 
 ## 2.2 禁用 Swap 交换分区
 
 内存不够用了，请加内存条，别用硬盘来忽悠！
+
 ```bash
 swapoff -a
 vim /etc/fstab
@@ -43,17 +44,14 @@ sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig
 - 禁用 Firewalld
 
 ```bash
-systemctl stop firewalld
-systemctl disable firewalld
+systemctl disable --now firewalld
 ```
-
 
 - 开放端口
 
 ![mark](https://cdn.sguan.top/markdown/20191007/ejAdzY6pjM9M.png?imageslim)
 
 上图中是 k8s 默认使用的端口列表，其中带 * 星号的端口为可配置端口，可以自行手动配置防火墙手动开启。
-
 
 ## 2.5 iptables 
 
