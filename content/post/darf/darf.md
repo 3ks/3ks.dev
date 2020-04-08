@@ -6,6 +6,15 @@ draft: true
 
 ---
 
+# 
+
+```yaml
+apiVersion: v1
+Kind: Issue
+metadata:
+  name: ""
+```
+
 # cp -f 依然提示是否覆盖
 
 [linux cp拷贝覆盖不提示](https://blog.csdn.net/sunny05296/article/details/78607277)
