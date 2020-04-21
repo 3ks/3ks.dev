@@ -42,13 +42,15 @@ CPU 调度算法、Go 调度器（GMP）、kubernetes 调度器（标签、污�
 
 # 内存管理
 
+Cache、RAM、ROM、内存回收、GC、三色标记算法
+
 # 存储
 
 硬盘、分区、LVM 卷管理、LVM thin p...、文件系统、RAID 0 1 5 10、NFS、Ceph、PV、PVC
 
 # 数据
 
-Mysql、Redis、集群、主从、原生 SQL。
+原生 SQL、Mysql、Redis、集群、主从、索引、数据结构。
 
 # 安全
 
