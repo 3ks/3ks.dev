@@ -28,19 +28,45 @@ draft: true
 
 基于这三点，PicGo 上传图片的操作异常简单：Ctrl + C（或者截图）-> 上传快捷键 -> Ctrl + V。然后我就可以得到一个 markdown 的图片链接。整个过程是如此的简单而灵活，必需给作者[一个赞](https://picgo.github.io/PicGo-Doc/zh/guide/#%E8%B5%9E%E5%8A%A9)。
 
+# 使用方式
+
+这里简单记录一下 Windows 平台下，使用 PicGo 作为图床工具，管理七牛云对象的过程。
+
+### 下载并安装 PicGo
+
+前往 https://github.com/Molunerfinn/PicGo/releases 根据自己的平台，选择下载最新的稳定版即可。如果你想尝鲜，也可以选择 Beta 版。
+
+![下载 PicGo](https://cdn.sguan.top/makrdown/20200504181617.png)
+
+然后双击安装程序，下一步，完成安装即可，没啥好说的。
+
+### 图床配置
+
+显示图床
+
+PicGo 支持多种图床，而我目前只使用七牛云，对于其它用不到的图床，可以在 `PicGo 设置`界面将其隐藏：
+
+![选择显示的图床](https://cdn.sguan.top/makrdown/20200504184126.png)
+
+填写图床信息
+
+![七牛云配置](https://cdn.sguan.top/makrdown/20200504184232.png)
+
+这些配置项都取决于你自己的实际情况，如果你不清楚相关配置项应该如何填写的话，可以搜索一下入门文章或者七牛云官方文档。
+
 # 一个坑
 
 对于使用`七牛云`的同学，在设置图床时，`访问地址` 记得填上 `http://` 或者 `https://`。
 
-![name](https://cdn.sguan.top/makrdown/20200504174421.png)
+![图床设置](https://cdn.sguan.top/makrdown/20200504174421.png)
 
-虽然不填也不会报错，图片也能正确上传，但会影响到`生成的链接`和`图片预览`。
+虽然不填不会报错，图片也能正确上传，但这会影响到`生成的链接`和`图片预览`。
 
 如果去掉访问地址的 `https://`，此时生成的图片链接会是这样：`![name](cdn.sguan.top/makrdown/20200504174627.png)`，虽然图片已经上传成功，但这个地址很多 markdown 渲染器是无法正确渲染的，需要我们手动加上 `https://`。
 
 并且图片预览界面也会异常，无法正常显示这种图片。
 
-![name](https://cdn.sguan.top/makrdown/20200504175057.png)
+![异常界面](https://cdn.sguan.top/makrdown/20200504175057.png)
 
 # 总结
 
