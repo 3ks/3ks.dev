@@ -1,3 +1,13 @@
+# 0.0.4
+
+整体迁移至 [Hexo]()，使用主题 [icarus]()
+
+TODO：
+
+- [ ] CDN 加速静态文件
+- [ ] 内容迁移
+- [ ] GitHub Action 迁移
+
 # 0.0.3
 
 使用 [Github Action](https://github.com/features/actions) 实现 CI/CD

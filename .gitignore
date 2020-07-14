@@ -1,4 +1,7 @@
-.idea
+.idea/
+node_modules/
+public/
+.deploy*/
 Thumbs.db
 .DS_Store
 .dist
@@ -8,4 +11,5 @@ npm-debug.log
 node_modules
 builds
 package-lock.json
-public
+db.json
+*.log
