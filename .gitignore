@@ -2,14 +2,13 @@
 node_modules/
 public/
 .deploy*/
+builds/
 Thumbs.db
 .DS_Store
 .dist
 .tmp
 .sass-cache
 npm-debug.log
-node_modules
-builds
 package-lock.json
 db.json
 *.log
