@@ -10,27 +10,38 @@ jobs:
       - name: CheckOut
         uses: actions/checkout@v2
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.4.5
+      - name: Hexo Clean
+        uses: heowc/action-hexo@master
         with:
-          hugo-version: '0.65.3'
-          extended: true
+          args: clean
 
-      - name: Build for github.io
-        run: hugo --minify --baseURL https://gorda.github.io/
+      - name: Load and Generate for 3ks.github.io
+        env:
+          HYFG: ${{ secrets.HEXO_YAML_FOR_GITHUB }}
+          HPYFG: ${{ secrets.HEXO_POST_YAML_FOR_GITHUB }}
+        run: |
+          echo "${HYFG}" > themes/icarus/_config.yml
+          echo "${HPYFG}" > themes/icarus/_config.post.yml
+          hexo generate
 
-      - name: Deploy to github.io
+      - name: Deploy to 3ks.github.io
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: gorda/gorda.github.io
+          external_repository: 3ks/3ks.github.io
           publish_branch: master
           publish_dir: ./public
 
-      - name: Build for gorda.io
-        run: hugo --minify --baseURL https://gorda.io/
+      - name: Load and Generate for 3ks.dev
+        env:
+          HYFS: ${{ secrets.HEXO_YAML_FOR_SITE }}
+          HPYFS: ${{ secrets.HEXO_POST_YAML_FOR_SITE }}
+        run: |
+          echo "${HYFS}" > themes/icarus/_config.yml
+          echo "${HPYFS}" > themes/icarus/_config.post.yml
+          hexo generate
 
-      - name: Deploy to gorda.io
+      - name: Deploy to 3ks.dev
         env:
           ID_RSA: ${{ secrets.ID_RSA }}
           DO_HOST: ${{ secrets.DO_HOST }}
@@ -39,5 +50,5 @@ jobs:
           chmod 700 ~/.ssh
           echo "$ID_RSA" >> ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          mv ./public ./www
-          scp -o StrictHostKeyChecking=no -r ./www $DO_HOST
+          mv ./public ./3ks
+          scp -o StrictHostKeyChecking=no -r ./3ks $DO_HOST
