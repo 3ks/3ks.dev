@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches:
-      - master2
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,12 +30,19 @@ jobs:
 
       - name: Load and Generate for 3ks.github.io
         env:
-          HYFG: ${{ secrets.HEXO_YAML_FOR_GITHUB }}
-          HPYFG: ${{ secrets.HEXO_POST_YAML_FOR_GITHUB }}
+          HY: ${{ secrets.HEXO_YAML }}
+          HPT: ${{ secrets.HEXO_POST_YAML }}
+          HGY: ${{ secrets.HEXO_GITHUB_YAML }}
         run: |
-          echo "${HYFG}" > themes/icarus/_config.yml
-          echo "${HPYFG}" > themes/icarus/_config.post.yml
-          hexo generate
+          rm -f ./themes/icarus/_config.yml
+          sudo echo "${HY}" > ./themes/icarus/_config.yml
+          sudo echo "${HPT}" > ./themes/icarus/_config.post.yml
+          sudo echo "${HGY}" > _config.yml
+
+      - name: Hexo Generate for 3ks.github.io
+        uses: heowc/action-hexo@master
+        with:
+          args: generate
 
       - name: Deploy to 3ks.github.io
         uses: peaceiris/actions-gh-pages@v3
@@ -47,12 +54,14 @@ jobs:
 
       - name: Load and Generate for 3ks.dev
         env:
-          HYFS: ${{ secrets.HEXO_YAML_FOR_SITE }}
-          HPYFS: ${{ secrets.HEXO_POST_YAML_FOR_SITE }}
+          HSY: ${{ secrets.HEXO_SITE_YAML }}
         run: |
-          echo "${HYFS}" > themes/icarus/_config.yml
-          echo "${HPYFS}" > themes/icarus/_config.post.yml
-          hexo generate
+          sudo echo "${HSY}" > _config.yml
+
+      - name: Hexo Generate for 3ks.dev
+        uses: heowc/action-hexo@master
+        with:
+          args: generate
 
       - name: Deploy to 3ks.dev
         env:
