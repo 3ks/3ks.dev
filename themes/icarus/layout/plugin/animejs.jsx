@@ -15,7 +15,8 @@ AnimeJs.Cacheable = cacheComponent(AnimeJs, 'plugin.animejs', props => {
     const { helper, head } = props;
     return {
         head,
-        jsUrl: helper.url_for('/js/animation.js')
+        jsUrl: helper.url_for('https://static.sguan.top/js/animation.js')  // 自定义 CDN
+        // jsUrl: helper.url_for('/js/animation.js')
     };
 });
 

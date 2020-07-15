@@ -146,7 +146,8 @@ module.exports = class extends Component {
             <link rel="stylesheet" href={iconcdn()} />
             {hlTheme ? <link rel="stylesheet" href={cdn('highlight.js', '9.12.0', 'styles/' + hlTheme + '.css')} /> : null}
             <link rel="stylesheet" href={fontCssUrl[variant]} />
-            <link rel="stylesheet" href={url_for('/css/' + variant + '.css')} />
+            <link rel="stylesheet" href={url_for('https://static.sguan.top/css/' + variant + '.css')} /> {/*  自定义 CDN */}
+            {/*<link rel="stylesheet" href={url_for('/css/' + variant + '.css')} />*/}
             <Plugins site={site} config={config} helper={helper} page={page} head={true} />
 
             {adsenseClientId ? <script data-ad-client={adsenseClientId}

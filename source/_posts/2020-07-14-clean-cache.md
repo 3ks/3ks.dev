@@ -1,6 +1,5 @@
 ---
 title: Linux 清理缓存
-thumbnail: 'https://cdn.sguan.top/makrdown/20200714230913.png'
 disqusId: d3fa116c-c5de-11ea-87d0-0242ac130003
 categories:
   - ["Linux","CentOS","cache"]
