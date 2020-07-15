@@ -4,13 +4,13 @@
 
 TODO：
 
-- [x] 调整滚动条样式
+- [x] 调整滚动条样式（已合并至 [icarus](https://github.com/ppoffice/hexo-theme-icarus/pull/767)）
 - [x] 调整单行代码样式
 - [x] 自定义背景图片
 - [x] 毛玻璃页脚
 - [x] 自定义 404 
 - [x] GitHub Action
-- [ ] CDN 加速静态文件
+- [x] CDN 加速静态文件
 
 # 0.0.3
 
