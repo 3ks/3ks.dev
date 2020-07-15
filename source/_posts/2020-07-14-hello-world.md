@@ -11,6 +11,17 @@ date: 2020-07-14 22:03:46
 
 > 引用文字
 
+```flow
+st=>start: 开始
+op=>operation: My Operation
+cond=>condition: Yes or No?
+e=>end
+st->op->cond
+cond(yes)->e
+cond(no)->op
+&
+```
+
 ## shell 片段
 
 ```bash
