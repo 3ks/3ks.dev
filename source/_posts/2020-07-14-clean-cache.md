@@ -15,7 +15,7 @@ date: 2020-07-14 22:28:33
 <!-- more -->
 
 ```bash
-sync && echo 1 > /proc/sys/vm/drop_caches
+$ sync && echo 1 > /proc/sys/vm/drop_caches && echo 2 > /proc/sys/vm/drop_caches && echo 3 > /proc/sys/vm/drop_caches
 ```
 
 ## 参考链接
