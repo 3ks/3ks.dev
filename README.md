@@ -12,9 +12,9 @@ TODO：
 - [x] GitHub Action
 - [x] CDN 加速静态文件
 - [x] 调整代码块样式
-- [ ] Google Analytics
-- [ ] Google Feedburner
+- [x] Google Analytics
 - [ ] RSS
+- [ ] Google Feedburner
 
 # 0.0.3
 
