@@ -1,3 +1,7 @@
+# 3ks.dev
+
+![Actions Status](https://github.com/3ks/3ks.dev/workflows/ci.yml/badge.svg)
+
 # 0.0.4
 
 整体迁移至 [Hexo](https://hexo.io/)，使用主题 [icarus](https://github.com/ppoffice/hexo-theme-icarus)
