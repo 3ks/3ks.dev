@@ -1,6 +1,6 @@
 # 3ks.dev
 
-![Actions Status](https://github.com/3ks/3ks.dev/workflows/ci.yml/badge.svg)
+![Actions Status](https://github.com/3ks/3ks.dev/workflows/Action/badge.svg)
 
 # 0.0.4
 
