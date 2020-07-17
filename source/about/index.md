@@ -38,13 +38,11 @@ widgets:
 
 ## 开源贡献
 
-涉及领域较广，但大部分都是一些没有技术含量的贡献，例如文档等
-
-但我不认为自己所做的事情没有意义，我把这看作是一个学习、积累的过程
+大部分都是一些没什么技术含量的贡献，但我不认为自己所做的事情没有意义，我把这看作是一个学习、积累的过程
 
 ### 开源组织
 
-请访问 https://github.com/3ks 获取详情
+侥幸混进了一些开源组织，请访问 https://github.com/3ks 查看。
 
 ### Golang 基础 
 
@@ -55,6 +53,8 @@ widgets:
 - [unknwon/the-way-to-go_ZH_CN](https://github.com/unknwon/the-way-to-go_ZH_CN)
 
 ### Golang 应用
+
+- [google/go-github](https://github.com/google/go-github)
 
 - [gin-gonic/website](https://github.com/gin-gonic/website)
 
@@ -71,6 +71,10 @@ widgets:
 - [kubernetes/website](https://github.com/kubernetes/website)
 
 - [istio/istio.io](https://github.com/istio/istio.io)
+
+### 计算机基础
+
+- [CyC2018/CS-Notes](https://github.com/CyC2018/CS-Notes)
 
 ### 前端
 
@@ -90,13 +94,11 @@ widgets:
 
 ### CDN
 
-除 html 文件外，几乎所有的静态文件都通过 CDN 加速。
-
-因此，即使服务器在美国，但访问速度还是不错
+除 html 文件外，几乎所有的静态文件都通过 CDN 加速。虽然服务器在美国，但访问速度还是不错
 
 ### GitHub Action 
 
-基于 GitHub Action 实现 CI/CD，并且分别部署到了 https://3ks.dev 和 https://3ks.github.io
+基于 GitHub Action 实现 CI/CD，分别部署到了 https://3ks.dev 和 https://3ks.github.io
 
 一个由自己的服务器提供服务，一个由 GitHub Page 托管，其中一个挂掉，也可以访问另一个，两者内容完全一致
 
