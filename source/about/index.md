@@ -10,7 +10,25 @@ widgets:
       position: right
 ---
 
-欢迎访问我的博客。
+您好，欢迎访问我的博客。
+
+## 博客说明
+
+一个没什么技术含量的博客，主要是一些自己的学习笔记，不对的地方请多多指教。
+
+### 静态博客
+
+基于 [Hexo](https://hexo.io/)，使用主题 [icarus](https://github.com/ppoffice/hexo-theme-icarus)
+
+### CDN
+
+除 html 文件外，几乎所有的静态文件都通过 CDN 加速。虽然服务器在美国，但访问速度还是不错
+
+### GitHub Action 
+
+基于 GitHub Action 实现 CI/CD，分别部署到了 https://3ks.dev 和 https://3ks.github.io
+
+一个由自己的服务器提供服务，一个由 GitHub Page 托管，其中一个挂掉，也可以访问另一个，两者内容完全一致
 
 ## 我是
 
@@ -20,7 +38,7 @@ widgets:
 
 ## 性格
 
-有思想、爱自由、死肥宅、内向、友善、杠精、专一、折腾、强迫症、追逐极限
+学以致用、强迫症、爱折腾、有思想、爱自由、死肥宅、内向、友善、杠精、专一
 
 ## 职业
 
@@ -85,22 +103,6 @@ widgets:
 - [chrislgarry/Apollo-11](https://github.com/chrislgarry/Apollo-11)
 
 - [r-spacex/SpaceX-API](https://github.com/r-spacex/SpaceX-API)
-
-## 博客说明
-
-### 静态博客
-
-基于 [Hexo](https://hexo.io/)，使用主题 [icarus](https://github.com/ppoffice/hexo-theme-icarus)
-
-### CDN
-
-除 html 文件外，几乎所有的静态文件都通过 CDN 加速。虽然服务器在美国，但访问速度还是不错
-
-### GitHub Action 
-
-基于 GitHub Action 实现 CI/CD，分别部署到了 https://3ks.dev 和 https://3ks.github.io
-
-一个由自己的服务器提供服务，一个由 GitHub Page 托管，其中一个挂掉，也可以访问另一个，两者内容完全一致
 
 ## 为什么是 3ks
 
