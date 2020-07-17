@@ -1,6 +1,6 @@
 # 3ks.dev
 
-![Actions Status](https://github.com/3ks/3ks.dev/workflows/Action/badge.svg)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/3ks/3ks.dev/Action)
 
 # 0.0.4
 
