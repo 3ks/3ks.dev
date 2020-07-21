@@ -100,7 +100,7 @@ widgets:
 
 ## 为什么是 3ks
 
-我的 GitHub ID 是 [3ks](https://github/3ks)，所以就申请了 [3ks.dev](https://3ks.dev) 域名
+我的 GitHub ID 是 [3ks](https://github.com/3ks)，所以就申请了 [3ks.dev](https://3ks.dev) 域名
 
 为什么是 3ks 呢？很简单，因为短，对于 ID 这种东西，个人认为越短越好（深受 QQ 号荼毒）
 

@@ -1,7 +1,7 @@
 ---
-title: 如何为项目添加 badge
+title: 如何为你的 GitHub 项目添加 badge
 thumbnail: ''
-disqusId: some-disqus-id
+disqusId: c8c31844-fbcd-4928-b007-c97c9f39b66f
 categories:
   - [Github,Badge]
 tags:
@@ -19,29 +19,31 @@ date: 2020-07-17 15:37:37
 
 <!-- more -->
 
-## markdown 插入图片
+## markdown 与图片 
+
+### markdown 插入图片
 
 我们都知道项目的 README 是一个 markdown 文件，在 markdown 内可以这样插入一张图片
 
 ```markdown
-![](https://c-ssl.duitang.com/uploads/item/201610/25/20161025212336_mYJh2.thumb.300_0.jpeg)
+![](https://cdn.sguan.top/markdown/20200721141223.png)
 ```
 
 其效果类似于这样：
 
-![](https://c-ssl.duitang.com/uploads/item/201610/25/20161025212336_mYJh2.thumb.300_0.jpeg)
+![](https://cdn.sguan.top/markdown/20200721141223.png)
 
-## markdown 图片链接
+### markdown 插入图片链接
 
 此外，如果我们想在点击图片后，跳转到某个页面，可以这样写：
 
 ```markdown
-[![](https://c-ssl.duitang.com/uploads/item/201610/25/20161025212336_mYJh2.thumb.300_0.jpeg)](https://baidu.com)
+[![](https://cdn.sguan.top/markdown/20200721141223.png)](https://baidu.com)
 ```
 
 其效果类似于这样：
 
-[![](https://c-ssl.duitang.com/uploads/item/201610/25/20161025212336_mYJh2.thumb.300_0.jpeg)](https://baidu.com)
+[![](https://cdn.sguan.top/markdown/20200721141223.png)](https://baidu.com)
 
 点一下图片试试，看看和前一张图片的区别。
 
@@ -49,19 +51,67 @@ date: 2020-07-17 15:37:37
 
 徽章其实也只是一些图片，只不过它看起来会很小，包含了一些信息，并且一般是 svg 格式的。也就是说我们只要在 README.md 中引入这种风格的图片就可以了。
 
-![](https://img.shields.io/github/v/release/kubernetes/kubernetes?style=for-the-badge)
+一个徽章的构成元素包括：标签、信息、风格样式：![](https://img.shields.io/github/v/release/kubernetes/kubernetes?style=for-the-badge)
 
-现在的问题在于我们如何得到这些符合自己需要的图片呢？
+上面这个徽章，它的标签是 `RELEASE`，信息是 `x.x.x` 的一个版本号，风格比较扁平化。
 
-目前我们在 GitHub 上看到的很多徽章都是在 https://shields.io 这个网站生成的，该网站提供了数以百计的徽章可以选择，并且你还可以自定义徽章，这足以满意绝大部分开发者的需求。生成的图片都会有一个唯一地址，你可以直接引用该图片，或者下载图片，将其保存到项目中，再通过相对目录引用图片。无论如何，我们需要做的只是生成想要的图片、在 markdown 中引入它。
+> 问题在于我们如何生成符合自己需求的图片呢？
+
+答案是 [shields.io](https://shields.io)，目前我们在 GitHub 上看到的很多徽章都是在这个网站生成的，该网站提供了数以百计的徽章可以选择，并且你还可以自定义徽章，这足以满意绝大部分开发者的需求。生成的图片都会有一个唯一地址，你可以直接引用该图片，或者下载图片，将其保存到项目中，再通过相对目录引用图片。无论如何，我们需要做的只是生成想要的图片、在 markdown 中引入它。
 
 虽然有很多的徽章可以选择，但一般只需要为重要的信息添加徽章，过多的徽章会让读者无法快速提取其中的信息。至于哪些是重要的信息，这取决于具体的项目以及你自身的理解。
 
 ## 静态徽章
 
-### 预置
+对一个项目来说，某些徽章基本上不会发生变化，例如：开源协议、一些链接等。
 
-### 自定义
+这种徽章可以看成是静态徽章，即不会变化的徽章。
+
+### 开源协议
+
+shields.io 提供了大量的静态徽章，这里我们以 `开源协议` 系列的徽章为例。
+
+开源协议相关的徽章可以在 [这里](https://shields.io/category/license) 看到。
+
+![shields 提供的开源协议](https://cdn.sguan.top/markdown/20200721161049.png)
+
+点击你需要的协议，然后填入参数（这里我其实没太明白规则，一般填入 `e.g.` 后面的字符即可），例如：
+
+![生成徽章](https://cdn.sguan.top/markdown/20200721162121.png)
+
+红色圈出来的部分就是我们生成的徽章，点击下面的 `Copy Badge URL` 即可复制徽章图片的地址，得到的地址类似于这样：
+
+```url
+https://img.shields.io/aur/license/android-studio
+```
+
+你也可以点击 `⬇` 展开，复制其它格式的地址，不同格式的地址本质上并没有区别，例如 markdown 格式的徽章地址。
+
+```
+![AUR license](https://img.shields.io/aur/license/android-studio)
+```
+
+### 调整风格
+
+此外，你可以修改参数，生成不同风格的徽章。
+
+![style](https://cdn.sguan.top/markdown/20200721162822.png)
+
+生成的徽章就会是风格比较扁平化的徽章。![](https://img.shields.io/aur/license/android-studio?style=for-the-badge)
+
+### 自定义徽章
+
+如果预置的徽章都不能满足你的要求，你还可以生成自定义徽章。
+
+[shields.io](https://shields.io) 每个页面的底部都提供了自定义徽章的功能，你可以根据自己的需要填入信息、生成徽章、引用。
+
+https://img.shields.io/badge/ID-3ks-brightgreen?style=for-the-badge
+
+![](https://cdn.sguan.top/markdown/20200721164249.png)
+
+https://img.shields.io/static/v1?label=NAME&message=Guan&color=brightgreen?style=for-the-badge
+
+https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR>
 
 ## 动态徽章
 
