@@ -1,7 +1,7 @@
 ---
 title: 复习 Mysql
-thumbnail: ''
-disqusId: some-disqus-id
+thumbnail: https://cdn.sguan.top/markdown/20200826174302.png
+disqusId: 312a9353-af74-455f-9d75-ead442e3080c
 categories:
   - ["database","mysql"]
 tags:
