@@ -3,9 +3,11 @@ title: 在 Centos 8 上安装 Docker
 thumbnail: 'https://cdn.sguan.top/markdown/20200826193725.png'
 disqusId: c4c7fb84-b18e-4315-bad3-4d8c2a1edaee
 categories:
-  - todo
+  - docker
 tags:
-  - todo
+  - docker
+  - docker-compose
+  - centos8
 date: 2020-08-26 19:35:55
 ---
 
