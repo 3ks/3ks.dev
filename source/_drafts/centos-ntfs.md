@@ -1,5 +1,5 @@
 ---
-title: "使 CentOS 支持 NTFS"
+title: "使 CentOS 支持 NTFS（弃用）"
 date: 2020-02-22T17:00:13+08:00
 tags: ["CentOS","NTFS"]
 draft: false 
