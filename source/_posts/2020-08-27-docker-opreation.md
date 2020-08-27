@@ -1,12 +1,19 @@
 ---
-title: "批量操作 Docker 镜像"
-date: 2020-03-16T21:09:29+08:00
-tags: ["docker","docker images","export","import"]
-draft: true 
-
+title: docker 的一些操作
+thumbnail: 'https://cdn.sguan.top/markdown/20200827153230.png'
+disqusId: 70439d0c-c708-441c-bc9f-8edf2ccd4cfc
+categories:
+  - docker
+tags:
+  - docker
+date: 2020-08-27 15:30:00
 ---
 
-# 筛选镜像
+在使用 docker 时的一点及其，本质上来讲学好 linux 的命令，用任何软件都很简单。
+
+<!-- more -->
+
+## 筛选镜像
 
 ### docker image
 
@@ -27,7 +34,7 @@ redis                                                          5.0.5-alpine     
 $ docker  images | grep "keyword"
 ```
 
-# 列出镜像
+## 列出镜像
 
 ### 按镜像名列出
 
@@ -47,7 +54,7 @@ $ docker  images | grep "keyword"  | sed  '1d' | awk  '{print $1":"$2}'
 docker images | grep "keyword" | awk '{print $3}'
 ```
 
-# 批量操作
+## 批量操作
 
 ### 批量导出镜像
 
@@ -81,7 +88,7 @@ docker rmi -f $(docker images | grep "keyword" | awk '{print $3}')
 
 如果遇到多个镜像拥有相同的 `IMAGE ID`，在第二种方式中，会强制删除所有所有与 `IMAGE ID` 匹配的镜像，而不论其他镜像是否与 `keyword` 匹配。
 
-第一张方式则不会删除这种镜像
+第一种方式则不会删除这种镜像
 
 # 参考链接
 
