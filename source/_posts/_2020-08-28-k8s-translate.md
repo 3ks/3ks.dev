@@ -1,16 +1,19 @@
 ---
-title: "Translate"
-date: 2020-03-07T10:58:51+08:00
-tags: ["none",]
-draft: true 
-
+title: k8s translate 纠错笔记本
+thumbnail: ''
+disqusId: some-disqus-id
+categories:
+  - todo
+tags:
+  - todo
+date: 2020-08-28 00:03:10
 ---
 
-# 建议词汇表
+记录了一些在翻译过程中遇到的一些错误，以及大佬们给的建议
 
-记录了一些在翻译过程中遇到的一些错误
+<!-- more -->
 
-# 机器翻译注意单词
+## 机器翻译注意单词
 
 不代表机翻是错误的，只是人们习惯的叫法不同。
 
@@ -23,7 +26,7 @@ load balance     |     负载平衡     |    负载均衡      |
 namespace        |     名称空间     |    命名空间      |
 container image  |    容器图像      |   容器镜像       |
 
-# 19492
+## 19492
 
 feedback by [tengqm](https://github.com/tengqm) of [kuberntes](https://github.com/kubernetes) in [pr#19492](https://github.com/kubernetes/website/pull/19492)
 
@@ -48,7 +51,7 @@ public key path        | 公钥路径             |
 credential name        | 凭据名称             |
 cert/key pair          | 证书/密钥偶对         |
 
-###### 2
+### 2
 
 How certificates are used by your cluster
 
@@ -58,7 +61,7 @@ How certificates are used by your cluster
 
 > how 不是 how many
 
-###### 3
+### 3
 
 etcd also implements mutual TLS to authenticate clients and peers.
 
@@ -66,7 +69,7 @@ etcd also implements mutual TLS to authenticate clients and peers.
 
 etcd 还实现了双向 TLS 来对客户端和对其他对等节点进行身份验证。
 
-###### 4 
+### 4 
 
 any other IP or DNS name you contact your cluster on (as used by [kubeadm][kubeadm] the load balancer stable IP and/or DNS name, `kubernetes`, `kubernetes.default`, `kubernetes.default.svc`,
 `kubernetes.default.svc.cluster`, `kubernetes.default.svc.cluster.local`)
@@ -75,7 +78,7 @@ any other IP or DNS name you contact your cluster on (as used by [kubeadm][kubea
 
 用来连接到集群的不同 IP 或 DNS 名（就像 [kubeadm][kubeadm] 为负载均衡所使用的固定 IP 或 DNS 名，`kubernetes`、`kubernetes.default`、`kubernetes.default.svc`、`kubernetes.default.svc.cluster`、`kubernetes.default.svc.cluster.local`）
 
-###### 5
+### 5
 
 Hosts/SAN listed above are the recommended ones for getting a working cluster; if required by a specific setup, it is possible to add additional SANs on all the server certificates.
 
@@ -84,7 +87,7 @@ Hosts/SAN listed above are the recommended ones for getting a working cluster; i
 上面列出的 Hosts/SAN 是推荐的配置方式；如果需要特殊安装，则可以在所有服务器证书上添加其他 SAN。
 
 
-# 19533
+## 19533
 
 feedback by [tengqm](https://github.com/tengqm) of [kuberntes](https://github.com/kubernetes) in [pr#19533](https://github.com/kubernetes/website/pull/19533)
 
@@ -187,7 +190,7 @@ Once you have an Operator deployed, you'd use it by adding, modifying or deletin
 
 可以了！Operator 会负责应用所作的更改并保持现有服务处于良好的状态。
 
-# 19547
+## 19547
 
 feedback by [tengqm](https://github.com/tengqm) of [kuberntes](https://github.com/kubernetes) in [pr#19547](https://github.com/kubernetes/website/pull/19547)
 
