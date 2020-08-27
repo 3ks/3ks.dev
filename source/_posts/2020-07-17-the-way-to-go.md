@@ -1,6 +1,6 @@
 ---
 title: 重读 The Way to Go
-thumbnail: ''
+thumbnail: 'https://cdn.sguan.top/markdown/20200827133001.png'
 disqusId: 0601335d-0010-47df-9837-a5a905093f9b
 categories:
   - [go,the-way-to-go]

@@ -1,6 +1,6 @@
 ---
 title: 在 Centos 8 上安装 Docker
-thumbnail: 'https://cdn.sguan.top/markdown/20200826193725.png'
+thumbnail: 'https://cdn.sguan.top/markdown/20200827133150.png'
 disqusId: c4c7fb84-b18e-4315-bad3-4d8c2a1edaee
 categories:
   - docker

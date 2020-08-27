@@ -1,6 +1,6 @@
 ---
 title: 如何为你的 GitHub 项目添加 badge
-thumbnail: ''
+thumbnail: 'https://cdn.sguan.top/markdown/20200827135149.png'
 disqusId: c8c31844-fbcd-4928-b007-c97c9f39b66f
 categories:
   - [Github,Badge]

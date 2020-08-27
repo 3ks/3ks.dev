@@ -1,6 +1,6 @@
 ---
 title: Network Manager 入门
-thumbnail: ''
+thumbnail: 'https://cdn.sguan.top/markdown/20200827134629.png'
 disqusId: e933125c-1232-4ee0-bfa9-c1669d7513cf
 categories:
   - ["network","NetworkManager"]

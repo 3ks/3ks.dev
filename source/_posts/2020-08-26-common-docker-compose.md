@@ -1,11 +1,12 @@
 ---
-title: 常见的 docker-compose 清单
-thumbnail: ''
+title: 个人常用的 docker-compose 配置文件
+thumbnail: 'https://cdn.sguan.top/markdown/20200827140114.png'
 disqusId: 27fbdebe-7eb5-4aa1-a2ce-2d6f021621f7
 categories:
-  - todo
+  - ["docker","docker-compose"]
 tags:
-  - todo
+  - docker
+  - docker-compose
 date: 2020-08-26 21:54:17
 ---
 
