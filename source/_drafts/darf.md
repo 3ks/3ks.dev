@@ -6,14 +6,6 @@ draft: true
 
 ---
 
-# cp -f 依然提示是否覆盖
-
-[linux cp拷贝覆盖不提示](https://blog.csdn.net/sunny05296/article/details/78607277)
-
-# 网页指定 favicon
-
-[设置favicon的几种方式](https://blog.csdn.net/YLXB2/article/details/53336962)
-
 # 路线流程
 
 - 安装 proxmox 
