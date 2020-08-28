@@ -149,7 +149,48 @@ services :
       POSTGRES_PASSWORD : "mypassword"
 {% endcodeblock %}
 
-## TODO
+## GitLab
+
+### 版本区别
+
+GitLab 有两个版本，CE 和 EE。而 EE 又提供了多种级别的付费计划（包括一种免费的计划）。
+
+免费的 GitLab EE 与 CE 完全相同，区别在于升级到付费计划时，GitLab EE 更方便。如果有付费的可能，则最好安装 GitLab EE。如果完全没有付费的打算，则安装 GitLab CE。
+
+可以查看 [Community Edition or Enterprise Edition](https://about.gitlab.com/install/ce-or-ee/) 获取详情
+
+### 配置文件 
+
+{% codeblock "docker-compose.yaml" lang:yaml %}
+web:
+  image: 'gitlab/gitlab-ce:latest'
+  restart: always
+  hostname: 'web'
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'http://192.168.7.11:80'
+  ports:
+    - '8080:80'
+  volumes:
+    - '/cs/gitlab/config:/etc/gitlab'
+    - '/cs/gitlab/logs:/var/log/gitlab'
+    - '/cs/gitlab/data:/var/opt/gitlab'
+{% endcodeblock %}
+
+其中：
+
+- `external_url` 是必填的，其端口决定了其监听端口，我们在 `ports` 映射端口时需要注意。其地址会影响 `clone` 等按钮生成的 URL，在映射端口不一致的情况下，需要注意一下。
+- `GITLAB_OMNIBUS_CONFIG` 还支持其它参数，查看 [Pre-configure Docker container](https://docs.gitlab.com/omnibus/docker/#pre-configure-docker-container) 获取详情 
+
+## Harbor
+
+### 前提条件
+
+Harbor 组件较多，官方提供了安装脚本，直接下载使用即可，默认情况下，有以下[要求](https://goharbor.io/docs/2.0.0/install-config/installation-prereqs/)：
+ 
+- 至少双核 CPU、4G 内存、40 G 硬盘，建议 4 核 CPU、8G 内存、160 G 硬盘
+- 已安装 Docker 17.06+、Docker Compose 1.18.0+ 以及 Openssl
+- 可以使用端口：80、443、4443
 
 ## 参考连接
 
@@ -162,3 +203,5 @@ services :
 [postgresql数据库改变data目录](https://blog.csdn.net/u014373825/article/details/41477607)
 
 [Docker上部署FTP服务器（基于stilliard/pure-ftpd）](https://blog.csdn.net/Aria_Miazzy/article/details/83686834)
+
+[Install GitLab using Docker Compose](https://docs.gitlab.com/omnibus/docker/#install-gitlab-using-docker-compose)

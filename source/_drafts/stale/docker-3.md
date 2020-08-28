@@ -23,15 +23,14 @@ services :
     container_name : gitlab-runner
     volumes :
       - /var/run/docker.sock:/var/run/docker.sock
-      - /containers/gitlab/gitlab-runner/config:/etc/gitlab-runner
+      - /cs/gitlab/gitlab-runner/config:/etc/gitlab-runner
       - /etc/docker:/etc/docker
-      - /vendor:/vendor
     depends_on :
       - "gitlab-ce"
 
   gitlab-ce:
     image : gitlab/gitlab-ce:latest
-    hostname : 192.168.8.8
+    hostname : 192.168.7.10
     container_name : gitlab-ce
     mem_limit : 2300m
     environment :
@@ -43,9 +42,9 @@ services :
       - "20:20"
       - "80:80"
     volumes :
-      - /containers/gitlab/gitlab-ce/config:/etc/gitlab
-      - /containers/gitlab/gitlab-ce/logs:/var/log/gitlab
-      - /containers/gitlab/gitlab-ce/data:/var/opt/gitlab
+      - /cs/gitlab/gitlab-ce/config:/etc/gitlab
+      - /cs/gitlab/gitlab-ce/logs:/var/log/gitlab
+      - /cs/gitlab/gitlab-ce/data:/var/opt/gitlab
     depends_on :
       - "gitlab-redis"
       - "gitlab-postgresql"
@@ -54,7 +53,7 @@ services :
     image : sameersbn/redis:latest
     container_name : gitlab-redis
     volumes :
-      - /containers/gitlab/gitlab-redis:/var/lib/redis
+      - /cs/gitlab/gitlab-redis:/var/lib/redis
 
   gitlab-postgresql :
     image : sameersbn/postgresql:latest
@@ -64,8 +63,7 @@ services :
       - DB_USER=gitlab
       - DB_PASS=password
     volumes :
-      - /containers/gitlab/gitlab-postgresql:/var/lib/postgresql
-
+      - /cs/gitlab/gitlab-postgresql:/var/lib/postgresql
 ```
 
 ### 启动服务
