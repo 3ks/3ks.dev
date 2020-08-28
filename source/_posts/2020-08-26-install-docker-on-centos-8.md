@@ -103,13 +103,9 @@ For more examples and ideas, visit:
 
 由于网络方面的原因，我们在拉取镜像的时候速度可能会很慢，对此，我们可以通过编辑配置文件，配置镜像来加快其速度。
 
-在 Linux 系统中，默认情况下，Docker 的配置文件是 `/etc/docker/daemon.json`（[Configure the Docker daemon](https://docs.docker.com/config/daemon/#configure-the-docker-daemon)）
+访问 [阿里云-容器镜像服务](https://cr.console.aliyun.com/undefined/instances/mirrors) 获取自己专属的镜像加速地址。该页面附带了如何配置镜像的说明。
 
-{% codeblock "/etc/docker/daemon.json" lang:json %}
-{
-  "registry-mirrors": ["http://hub-mirror.c.163.com"]
-}
-{% endcodeblock %}
+在 Linux 系统中，默认情况下，Docker 的配置文件是 `/etc/docker/daemon.json`（[Configure the Docker daemon](https://docs.docker.com/config/daemon/#configure-the-docker-daemon)）
 
 配置好镜像后，你需要执行以下命令：
 
