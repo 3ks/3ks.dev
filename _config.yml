@@ -1,14 +1,14 @@
 # Site
-title: 官余棚的博客
-subtitle: '欢迎访问官余棚的博客'
-description: '一个没什么技术含量的博客，主要是个人的一些笔记，防止忘记，写得不对的地方还请多多指教'
-keywords: ["博客"]
+title: 官余棚的碎碎念
+subtitle: '欢迎访问官余棚的碎碎念博客'
+description: '一个没技术含量的、碎碎念的博客，主要是个人的一些笔记，防止忘记，写得不对的地方还请多多指教'
+keywords: ["博客","官余棚","blog","GuanYupeng","3ks","3ks.dev"]
 author: 官余棚
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-url: http://3ks.dev
+url: https://3ks.dev
 #url: http://localhost:4000
 root: /
 permalink: :year/:month/:day/:title/
