@@ -181,16 +181,48 @@ web:
 
 - `external_url` 是必填的，其端口决定了其监听端口，我们在 `ports` 映射端口时需要注意。其地址会影响 `clone` 等按钮生成的 URL，在映射端口不一致的情况下，需要注意一下。
 - `GITLAB_OMNIBUS_CONFIG` 还支持其它参数，查看 [Pre-configure Docker container](https://docs.gitlab.com/omnibus/docker/#pre-configure-docker-container) 获取详情 
+- GitLab 启动速度较慢，可以耐心等待几分钟，默认用户名为 `root`，密码会在首次访问时要求设置。
 
 ## Harbor
 
-### 前提条件
+### 下载离线安装包
 
-Harbor 组件较多，官方提供了安装脚本，直接下载使用即可，默认情况下，有以下[要求](https://goharbor.io/docs/2.0.0/install-config/installation-prereqs/)：
- 
-- 至少双核 CPU、4G 内存、40 G 硬盘，建议 4 核 CPU、8G 内存、160 G 硬盘
-- 已安装 Docker 17.06+、Docker Compose 1.18.0+ 以及 Openssl
-- 可以使用端口：80、443、4443
+```bash
+$ wget https://github.com/goharbor/harbor/releases/download/v2.0.2/harbor-offline-installer-v2.0.2.tgz
+$ tar xvf harbor-offline-installer-v2.0.2.tgz
+```
+
+### 修改配置文件
+
+```bash
+cd harbor
+cp harbor.yml.tmpl harbor.yml
+``` 
+
+编辑 `harbor.yml` 文件，其参数及含义可以参考 [Configure the Harbor YML File](https://goharbor.io/docs/2.0.0/install-config/configure-yml-file/)
+
+对于测试，个人习惯修改的配置有：
+
+```yaml
+hostname: 192.168.7.11
+data_volume: /cs/harbor/harbor/data # 数据目录
+log: 
+  local:
+    location: /cs/harbor/harbor/log # 日志目录
+# https # 想使用 HTTP 的话，需要把 HTTPS 相关的配置项注释掉
+```
+
+### 安装
+
+对于测试环境，可以直接执行以下命令开始安装：
+
+```bash
+$ sudo ./install.sh
+```
+
+对于有要求的环境（如安全、高可用等），参考[官方文档](https://goharbor.io/docs/2.0.0/install-config/run-installer-script/)
+
+Harbor 的默认用户是 `admin`，默认密码是 `Harbor12345`，首次登录后，应尽快更改密码。
 
 ## 参考连接
 
@@ -205,3 +237,5 @@ Harbor 组件较多，官方提供了安装脚本，直接下载使用即可，�
 [Docker上部署FTP服务器（基于stilliard/pure-ftpd）](https://blog.csdn.net/Aria_Miazzy/article/details/83686834)
 
 [Install GitLab using Docker Compose](https://docs.gitlab.com/omnibus/docker/#install-gitlab-using-docker-compose)
+
+[Harbor Installation and Configuration](https://goharbor.io/docs/2.0.0/install-config/)
