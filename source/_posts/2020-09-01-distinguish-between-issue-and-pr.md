@@ -425,7 +425,3 @@ https://github.com/1kib/new/pull/1381
 通过对比工具对比两者的内容，发现只能通过 payload 中的 URL 来区分两者。
 
 可用的参数有：`issue.url` 和 `issue.html_url`（ pr comment 也是这个参数），两者都是一个 URL 链接，包含关键字 `issues` 则表示 issue 的 comment，包含关键字 `pull` 则表示 pr 的 comment
-
-## 参考链接
-
-[name](https://github.com/3ks)
