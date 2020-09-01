@@ -72,5 +72,5 @@ jobs:
           chmod 700 ~/.ssh
           echo "$ID_RSA" >> ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          mv ./public ./3ks
-          scp -o StrictHostKeyChecking=no -r ./3ks $DO_HOST
+          mv ./public ./www
+          scp -o StrictHostKeyChecking=no -r ./www $DO_HOST
