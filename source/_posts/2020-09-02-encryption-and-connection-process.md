@@ -54,7 +54,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])?
 1. 服务端通过 `私钥解密(密码)` 获取到密码
 1. 密码验证通过则允许登录
 
-## 公钥登录
+### 公钥登录
 
 此时的过程大致如下：
 
