@@ -39,7 +39,7 @@ jobs:
           sudo echo "${HPT}" > ./themes/icarus/_config.post.yml
           sudo echo "${HGY}" > _config.yml
 
-      - name: Hexo Generate for 3ks.github.io
+      - name: Hexo Generate Public
         uses: heowc/action-hexo@master
         with:
           args: generate
@@ -51,17 +51,6 @@ jobs:
           external_repository: 3ks/3ks.github.io
           publish_branch: master
           publish_dir: ./public
-
-      - name: Load and Generate for 3ks.dev
-        env:
-          HSY: ${{ secrets.HEXO_SITE_YAML }}
-        run: |
-          sudo echo "${HSY}" > _config.yml
-
-      - name: Hexo Generate for 3ks.dev
-        uses: heowc/action-hexo@master
-        with:
-          args: generate
 
       - name: Deploy to 3ks.dev
         env:
