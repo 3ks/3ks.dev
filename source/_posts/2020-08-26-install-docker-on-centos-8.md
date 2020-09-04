@@ -30,13 +30,13 @@ Problem: package docker-ce-3:19.03.4-3.el7.x86_64 requires containerd.io >= 1.2.
 通过阿里云镜像安装：
 
 ```bash
-dnf install https://mirrors.aliyun.com/docker-ce/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
+$ dnf install -y https://mirrors.aliyun.com/docker-ce/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
 ```
 
 如果你的服务器在国外，或者网络足够好的化，也可以直接从 docker 官方下载安装：
 
 ```bash
-dnf install https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
+$ dnf install -y https://download.docker.com/linux/centos/7/x86_64/stable/Packages/containerd.io-1.2.6-3.3.el7.x86_64.rpm
 ```
 
 此外，上面的命令中的 rpm 包可能随着时间的推移而变得陈久，但你可以直接访问 [Docker 官方](https://download.docker.com/linux/centos/7/x86_64/stable/Packages) 或者 [阿里云镜像](https://mirrors.aliyun.com/docker-ce/linux/centos/7/x86_64/stable/Packages) 查看并选择最新的 rpm 包。
@@ -48,7 +48,7 @@ dnf install https://download.docker.com/linux/centos/7/x86_64/stable/Packages/co
 添加 Docker 官方的仓库信息：
 
 ```bash
-$ sudo yum install -y yum-utils
+$ sudo dnf install -y yum-utils
 $ sudo yum-config-manager  --add-repo  https://download.docker.com/linux/centos/docker-ce.repo
 ```
 
@@ -57,7 +57,7 @@ $ sudo yum-config-manager  --add-repo  https://download.docker.com/linux/centos/
 正常的 Docker 安装： 
 
 ```bash
-$ sudo yum install docker-ce docker-ce-cli
+$ sudo dnf install -y docker-ce docker-ce-cli
 ```
 
 ### 启动并添加开机启动项
@@ -141,7 +141,7 @@ sudo rm /usr/local/bin/docker-compose
 ### 卸载 Docker
 
 ```bash
-$ sudo yum remove docker-ce docker-ce-cli containerd.io
+$ sudo dnf remove docker-ce docker-ce-cli containerd.io
 ```
 
 但是，相关的镜像、容器、卷以及其它自定义目录下的内容不会被自动删除，你需要自己手动删除它们：
