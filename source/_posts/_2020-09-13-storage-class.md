@@ -290,6 +290,8 @@ drwxr-x--- 2 systemd-coredump systemd-coredump     4096 Sep 13 14:50  sys/
 
 ## 参考链接
 
+[KUBERNETES存储之PERSISTENT VOLUMES简介](https://www.cnblogs.com/styshoo/p/6731425.html)
+
 [Ubuntu 16.04 安装nfs server](https://www.jianshu.com/p/5314f90330a6)
 
 [Kubernetes NFS volume mount fail with exit status 32](https://stackoverflow.com/questions/34113569/kubernetes-nfs-volume-mount-fail-with-exit-status-32)
