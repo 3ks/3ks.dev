@@ -82,18 +82,18 @@ helm 主要用于快速部署应用，在修改方面的支持比较欠缺（而
 
 [Helm部署的服务如何修改配置](https://blog.csdn.net/boling_cavalry/article/details/105004586)
 
-## 一个代码片段
+## traefik
 
-{% codeblock "main.go" lang:go https://www.google.com 查看源文件 %}
-package main
+[https://docs.traefik.io/](https://docs.traefik.io/)
 
-import "fmt"
+## 删除 namespace 卡住
 
-func main() {
-	fmt.Println("hello world")
-}
-{% endcodeblock %}
+https://www.ichenfu.com/2019/02/20/kubernetes-namespaces-stuck-in-terminating-state/
 
-## 参考链接
+## kubectl 手册
 
-[name](https://github.com/3ks)
+[kubectl commands](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
+
+## kubectl 备忘单
+
+[kubectl 备忘单](https://kubernetes.io/zh/docs/reference/kubectl/cheatsheet/#kubectl-%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8)
