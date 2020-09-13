@@ -15,14 +15,8 @@ date: {{ date }}
 
 ## 一个代码片段
 
-{% codeblock "main.go" lang:go https://www.google.com 查看源文件 %}
-package main
+{% codeblock "main.go" lang:go >folded https://www.google.com 查看源文件 %}
 
-import "fmt"
-
-func main() {
-	fmt.Println("hello world")
-}
 {% endcodeblock %}
 
 ## 参考链接
