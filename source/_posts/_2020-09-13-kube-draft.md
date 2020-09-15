@@ -97,3 +97,49 @@ https://www.ichenfu.com/2019/02/20/kubernetes-namespaces-stuck-in-terminating-st
 ## kubectl 备忘单
 
 [kubectl 备忘单](https://kubernetes.io/zh/docs/reference/kubectl/cheatsheet/#kubectl-%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8)
+
+## 概念
+
+### 分组和选择
+
+- Labels
+- Selector
+
+### 配置 
+
+- ConfigMap 
+- Secrets
+- Resource Quota
+
+## 存储
+
+- 持久卷声明：Persistent Volumes Claim
+- 持久卷：Persistent Volumes 
+- 存储类：Storage Class
+
+### 工作负载
+
+- 最小调度单元：Pod
+- 无状态部署：Deployment
+- 有状态部署：StatefulSet
+- 守护部署：DaemonSet
+- 任务：Job、Cron Job
+
+### 通信
+
+- Ingress  
+- 服务：Service（ClusterIP、NodePort、LoadBalancer）
+- 端点：Endpoint、Endpoint Slice
+
+### 授权
+
+- Service Account
+- Role
+- Role Binding
+
+### CRD
+
+- CRD
+- Operator
+
+[Kubernetes，2020 快速入门](https://zhuanlan.zhihu.com/p/100644716)
