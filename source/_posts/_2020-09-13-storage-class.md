@@ -117,8 +117,10 @@ $ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 
 通过 helm 我们只需要执行一行命令即可完成 `nfs-client-provisioner` 的安装：
 
+如果你需要自定义一些参数，可以参考：[Configuration](https://github.com/helm/charts/tree/master/stable/nfs-client-provisioner#installing-the-chart)
+
 ```bash
-$ helm install --name your-release-name --set nfs.server=x.x.x.x --set nfs.path=/exported/path stable/nfs-client-provisioner
+$ helm install <your-release-name> --set nfs.server=x.x.x.x --set nfs.path=/exported/path stable/nfs-client-provisioner
 ```
 
 观察 deployment 的状态：
