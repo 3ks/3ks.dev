@@ -290,6 +290,30 @@ drwxr-x--- 2 systemd-coredump systemd-coredump     4096 Sep 13 14:50  sys/
 -rw-r----- 1 systemd-coredump systemd-coredump 12582912 Sep 13 14:52  undo_002
 ```
 
+## 配置默认 Storage Class
+
+获取 StorageClass 名称：
+
+```bash
+ kubectl get storageclass
+NAME         PROVISIONER                                  RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
+logs         cluster.local/logs-nfs-client-provisioner    Delete          Immediate           true                   28h
+data         cluster.local/nfs-1-nfs-client-provisioner   Delete          Immediate           true                   3d6h
+```
+
+指定为默认 Storage Class
+
+```bash
+$ kubectl patch storageclass <your-class-name> -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+$ kubectl patch storageclass nfs-client -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+```
+
+取消默认 Storage Class，只需要将最后的 `true` 变为 `false` 即可。 
+
+```bash
+$ kubectl patch storageclass <your-class-name> -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
+```
+
 ## 参考链接
 
 [KUBERNETES存储之PERSISTENT VOLUMES简介](https://www.cnblogs.com/styshoo/p/6731425.html)
@@ -311,3 +335,5 @@ drwxr-x--- 2 systemd-coredump systemd-coredump     4096 Sep 13 14:50  sys/
 [InnoDB: Table flags are 0 in the data dictionary but the flags in file ./ibdata1 are 0x4800!](https://www.jianshu.com/p/7af95b08b954)
 
 [Run a Single-Instance Stateful Application](https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/)
+
+[改变默认 StorageClass](https://kubernetes.io/zh/docs/tasks/administer-cluster/change-default-storage-class/)
