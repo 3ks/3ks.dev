@@ -369,8 +369,6 @@ spec:
 
 ## 为何不使用 Helm
 
-下载 chart
-
 不使用 helm 的原因是 Gitlab 的 helm Chart 包含了太多不需要的组件，例如：CertManager、Registry 等。并且一些参数无法按预期的执行。
 
 例如修改这些参数，但仍然不够，再直白点就是暂时玩不动。

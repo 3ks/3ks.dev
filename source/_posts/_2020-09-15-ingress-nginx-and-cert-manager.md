@@ -123,7 +123,7 @@ metadata:
   namespace: monitoring
   annotations:
     kubernetes.io/ingress.class: "nginx"    
-    cert-manager.io/issuer: "letsencrypt-prod"
+    cert-manager.io/issuer: "letsencrypt-prod" # 需与 issuer name 对应
 spec:
   tls:
   - hosts:
