@@ -64,6 +64,68 @@ spec:
 ```
 {% endcodeblock %}
 
+## 声明 PVC
+
+plugins
+
+plugin-dir
+
+sc-config-volume
+
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: jenkins
+  name: jenkins-tmp
+spec:
+  storageClassName: nfs-client
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: jenkins
+  name: jenkins-plugins
+spec:
+  storageClassName: nfs-client
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: jenkins
+  name: jenkins-plugin-dir
+spec:
+  storageClassName: nfs-client
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: jenkins
+  name: jenkins-sc-config-volume
+spec:
+  storageClassName: nfs-client
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+```
+
 ## 安装 Jenkins
 
 ```bash
