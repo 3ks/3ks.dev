@@ -143,3 +143,7 @@ https://www.ichenfu.com/2019/02/20/kubernetes-namespaces-stuck-in-terminating-st
 - Operator
 
 [Kubernetes，2020 快速入门](https://zhuanlan.zhihu.com/p/100644716)
+
+### CoreDNS 添加记录
+
+[CoreDNS 添加自定义DNS解析记录](https://www.cnblogs.com/keithtt/p/13204497.html)
