@@ -19,7 +19,7 @@ date: 2020-09-15 16:43:01
 拉取并解压 Chart：
 
 ```bash
-$ helm fetch https://github.com/prometheus-operator/kube-prometheus
+$ helm fetch stable/prometheus-operator
 $ tar -zxvf  kube-prometheus-stack-x.x.x.tgz
 ```
 
