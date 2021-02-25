@@ -35,6 +35,7 @@ jobs:
           HGY: ${{ secrets.HEXO_GITHUB_YAML }}
         run: |
           rm -f ./themes/icarus/_config.yml
+          # Hexo Yaml
           sudo echo "${HY}" > ./themes/icarus/_config.yml
           sudo echo "${HPT}" > ./themes/icarus/_config.post.yml
           sudo echo "${HGY}" > _config.yml
