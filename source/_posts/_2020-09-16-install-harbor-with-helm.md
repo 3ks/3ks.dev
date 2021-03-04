@@ -70,6 +70,7 @@ spec:
 
 ```bash
 $ helm repo add harbor https://helm.goharbor.io
+$ helm repo update
 $ helm fetch harbor/harbor
 $ tar -zxvf harbor-x.x.x.tgz
 ```

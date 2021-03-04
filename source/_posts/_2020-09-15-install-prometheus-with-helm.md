@@ -18,8 +18,12 @@ date: 2020-09-15 16:43:01
 
 拉取并解压 Chart：
 
+
 ```bash
-$ helm fetch stable/prometheus-operator
+$ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+$ helm repo update
+$ helm pull prometheus-community/kube-prometheus-stack
 $ tar -zxvf  kube-prometheus-stack-x.x.x.tgz
 ```
 

@@ -23,7 +23,7 @@ metadata:
   namespace: git
   name: git-redis-pvc
 spec:
-  storageClassName: nfs-client
+  storageClassName: sc-file
   accessModes:
     - ReadWriteOnce
   resources:
@@ -103,7 +103,7 @@ metadata:
   namespace: git
   name: git-postgresql-pvc
 spec:
-  storageClassName: nfs-client
+  storageClassName: sc-file
   accessModes:
     - ReadWriteOnce
   resources:
@@ -199,7 +199,7 @@ metadata:
   namespace: git
   name: git-web-pvc
 spec:
-  storageClassName: nfs-client
+  storageClassName: sc-file
   accessModes:
     - ReadWriteOnce
   resources:
@@ -296,13 +296,6 @@ spec:
         volumeMounts:
         - mountPath: /home/git/data
           name: data
-      volumes:
-      - name: data
-        persistentVolumeClaim:
-          claimName: git-web-pvc
-```
-{% endcodeblock %}
-
         livenessProbe:
           httpGet:
             path: /
@@ -315,6 +308,12 @@ spec:
             port: 80
           initialDelaySeconds: 5
           timeoutSeconds: 1
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: git-web-pvc
+```
+{% endcodeblock %}
 
 ## 准备 Issuer 和 Ingress
 

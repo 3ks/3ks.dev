@@ -122,9 +122,9 @@ $ helm repo add stable https://charts.helm.sh/stable
 如果你需要自定义一些参数，可以参考：[Configuration](https://github.com/helm/charts/tree/master/stable/nfs-client-provisioner#installing-the-chart)
 
 ```bash
-$ helm install <your-release-name> --set nfs.server=x.x.x.x --set nfs.path=/exported/path stable/nfs-client-provisioner
-$ helm install nfs-1 --set nfs.server=172.26.32.31 --set nfs.path=/data/nfs stable/nfs-client-provisioner
+$ helm install <your-release-name> --set nfs.server=x.x.x.x --set nfs.path=/exported/path --set storageClass.name=<sc-name> stable/nfs-client-provisioner
 ```
+
 
 观察 deployment 的状态：
 
@@ -298,7 +298,7 @@ drwxr-x--- 2 systemd-coredump systemd-coredump     4096 Sep 13 14:50  sys/
 获取 StorageClass 名称：
 
 ```bash
- kubectl get storageclass
+$ kubectl get storageclass
 NAME         PROVISIONER                                  RECLAIMPOLICY   VOLUMEBINDINGMODE   ALLOWVOLUMEEXPANSION   AGE
 logs         cluster.local/logs-nfs-client-provisioner    Delete          Immediate           true                   28h
 data         cluster.local/nfs-1-nfs-client-provisioner   Delete          Immediate           true                   3d6h

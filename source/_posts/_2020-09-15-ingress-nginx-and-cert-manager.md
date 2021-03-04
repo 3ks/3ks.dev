@@ -145,6 +145,10 @@ spec:
 $ kubectl apply -f service-ingress.yaml
 ```
 
+kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
+
+https://stackoverflow.com/questions/61365202/nginx-ingress-service-ingress-nginx-controller-admission-not-found
+
 查看状态：
 
 ```bash
