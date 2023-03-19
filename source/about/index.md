@@ -124,4 +124,4 @@ widgets:
 
 - 邮箱：1@linux.com
 
-- GitHub：https://github/3ks
+- GitHub：https://github.com/3ks
